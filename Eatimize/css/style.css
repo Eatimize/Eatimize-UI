@@ -38,7 +38,9 @@
        max-width:133px !important;
  }
  body{
+   /**
    background: url(../images/wh2marble.jpg);
+    */
  }
 .row {
   height: 100% !important;
