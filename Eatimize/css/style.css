@@ -5,7 +5,45 @@
  *
  * Made By MaterializeCSS.com
  */
+ .content {
+     position:relative;
+     width:100% !important;
+     margin: auto;
+     padding:0px;
+     height: 100%;
+}
+     #mat1{
+         background:url(mat111.png) no-repeat 0px 200px;
+         width:100%;
+         height:200px;
+         margin: auto;
+     }
 
+     #mat2{
+
+         background:url(mat222.png) no-repeat 0px 200px;
+         width:100%;
+         height:200px;
+         margin: auto;
+     }
+
+     #mat3{
+
+         background:url(mat333.png) no-repeat 0px 200px;
+         width:100%;
+         height:200px;
+         margin: auto;
+     }
+ .circle{
+       max-width:133px !important;
+ }
+ body{
+   background: url(../images/wh2marble.jpg);
+ }
+.row {
+  height: 100% !important;
+  margin: 0px !important;
+}
 nav ul a,
 nav .brand-logo {
   color: #444;
