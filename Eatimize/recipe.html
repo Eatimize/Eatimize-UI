@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+
         <style>
             body{
                  background-image:none
@@ -100,10 +100,17 @@
                 </ul>
             </div>
             <div class="white-text" id="test6">
-                <div id="chartdiv"></div>
-              Vi kan göra så att den startar i en viss flik, här kan vi ha diagrammet</div>
+              Vi kan göra så att den startar i en viss flik, här kan vi ha diagrammet
+              <div style="width:40%">
+                  <canvas id="canvas"></canvas>
             </div>
+
+          </div>
+
+
+
             </div>
+
         </div>
     </div>
 
@@ -114,16 +121,16 @@
 
         <!-- Scripts -->
 
-
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.js"></script>
         <script src="js/init.js"></script>
-        <script src="js/chart.js"></script>
+        <script src="js/Chart.js"></script>
+          <script src="js/Chart.min.js"></script>
+        <script src="js/Chart.bundle.min.js"></script>
+          <script src="js/Chart.bundle.js"></script>
 
-  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-  <script src="https://www.amcharts.com/lib/3/radar.js"></script>
-  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+          <script src="js/utils.js"></script>
+  <script src="js/radar.js"></script>
 
     </body>
 </html>
