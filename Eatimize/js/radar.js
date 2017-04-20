@@ -14,7 +14,7 @@ var randomScalingFactor = function() {
                 pointBackgroundColor: window.chartColors.white,
                 data: [
                     99,
-                    50,
+                    101,
                     70,
                     95,
 
