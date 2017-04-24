@@ -3,11 +3,11 @@
 }
 #R1u3{
     text-align: center;
-    margin-right: 10px;
+    margin-right: 3px;
 }
 #R1u2{
     text-align: center;
-    margin-right: 6px;
+    margin-right: 22px;
 }
 #R2{
     padding-top: 5px;
@@ -21,6 +21,12 @@
     margin-left: 40%;
     margin-right: 40%;
 }
+#age{
+    text-align: center;   
+}
+#tall{
+    text-align: center;
+}
 
 #R3{
     padding-top: 5px;
@@ -33,6 +39,9 @@
     text-align: center;
     margin-left: 35%;
     margin-right: 35%;
+}
+#exercise{
+    text-align: center;
 }
 .NextBtn{
     padding: 20px;
