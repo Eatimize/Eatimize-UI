@@ -22,6 +22,56 @@
 
 
     </style>
+        
+               <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+ <script src="js/init.js"></script>
+        
+        
+        <script> 
+        
+         $(document).ready(function() {
+             
+             $('#title').hide();
+             
+             $('#btnSearch').click(function(event) {
+                 
+                 $('#btnSearch').hide();
+                 $('#title').show();
+                 
+             });
+             
+         });
+            
+        $(document).click(function(e) {
+            
+            searchField = $('#title');
+            
+            if(!searchField.is(e.target){
+                               
+                
+                $('#btnSearch').show();
+                $('#title').hide();
+            }
+        });    
+            
+            
+            /*
+            $(document).click(function (e)
+{
+    var container = $(".searchit");
+
+    if (!container.is(e.target))
+    {
+        $('.searchbox').hide();
+        container.removeClass('search');
+    }
+});*/
+            
+            
+         
+        </script>
 
     <!--
 
@@ -56,14 +106,15 @@ LUDWIGS CSS:
           <!-- <input id="search" type="search" required>
           <label class="label-icon" for="search"><i class="material-icons">search</i></label> -->
 
-
-
-        <li><a href="Recept.html"><i class="material-icons left">search</i>Sök</a></li>
+          
+        <li><a id="btnSearch"><i class="material-icons left">search</i>Sök</a></li>
+          <li><input type="text" id="title"></li>
         <li><a href="Recept.html">Info</a></li>
         <li><a href="Recept.html">Min sida</a></li>
         <li><a href="Recept.html">Logga ut</a></li>
       </ul>
          <ul class="side-nav" id="mobile-demo">
+        <li><input type="text" id="title"></li>
         <li><a href="Recept.html">Sök</a></li>
         <li><a href="Recept.html">Info</a></li>
         <li><a href="Recept.html">Min sida</a></li>
@@ -72,8 +123,9 @@ LUDWIGS CSS:
     </div>
   </nav>
 
-
+    
 <!-- Sökresultat -->
+        
 <div class="row">
   <a href="recipe.html">
     <div class="col s12 m4">
@@ -89,11 +141,11 @@ LUDWIGS CSS:
         </div>
       </div>
     </div>
-</a>
 
-  </div>
-
-
+      </div>
+    </a>
+    
+     <a href="recipe.html">
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
@@ -103,12 +155,15 @@ LUDWIGS CSS:
             <span class="card-title">Spaghetti</span>
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
  <div class="progress" id="progress-bar" >
+    <div class="determinate" style="width: 70%"></div>
         </div>
       </div>
     </div>
 
-
-  </div>
+      </div>
+    </a>
+    
+     <a href="recipe.html">
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
@@ -118,168 +173,17 @@ LUDWIGS CSS:
             <span class="card-title">Spaghetti</span>
           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
  <div class="progress" id="progress-bar" >
-            </div>
-          </div>
-        </div>
-    </div>
-
-</div>
-
-<div class="row">
-
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/bg.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title">Spaghetti</span>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
- <div class="progress" id="progress-bar" >
+    <div class="determinate" style="width: 70%"></div>
         </div>
       </div>
     </div>
 
-
-  </div>
-
-
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/bg.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title">Spaghetti</span>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
- <div class="progress" id="progress-bar" >
-        </div>
       </div>
-    </div>
-
-
-  </div>
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/bg.jpg">
+    </a>
+    
+    
+    
         </div>
-        <div class="card-content">
-            <span class="card-title">Spaghetti</span>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
- <div class="progress" id="progress-bar" >
-            </div>
-          </div>
-        </div>
-    </div>
-
-</div>
-
-        <div class="row">
-
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/bg.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title">Spaghetti</span>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
- <div class="progress" id="progress-bar" >
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/bg.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title">Spaghetti</span>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
- <div class="progress" id="progress-bar" >
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/bg.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title">Spaghetti</span>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
- <div class="progress" id="progress-bar" >
-            </div>
-          </div>
-        </div>
-    </div>
-
-</div>
-
-        <div class="row">
-
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/bg.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title">Spaghetti</span>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
- <div class="progress" id="progress-bar" >
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/bg.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title">Spaghetti</span>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
- <div class="progress" id="progress-bar" >
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/bg.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title">Spaghetti</span>
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
- <div class="progress" id="progress-bar" >
-            </div>
-          </div>
-        </div>
-    </div>
-
-</div>
-
-          <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
- <script src="js/init.js"></script>
-
 
         </body>
 </html>
