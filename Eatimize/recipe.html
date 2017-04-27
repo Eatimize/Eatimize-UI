@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <title>EATIMIZE</title>
+
+         <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+   <!-- Kod för att flytta "Eatimize" i nav en bit åt höger -->    
+        <style>
+            .row {
+                padding: 10px;
+            }
+
+            .brand-logo {
+                margin-left: 20px;
+            }
+
+            body{
+                 background-image:none
+            }
+        </style>
+
+    </head>
+
+    <body>
+         <!-- Page header -->
+         <nav class="teal lighten-3">
+         <div class="nav-wrapper">
+
+           <a href="index1.html" class="brand-logo">EATIMIZE</a>
+           <a href="#" data-activates="mobile-demo" class="button-collapse">
+               <i class="material-icons">menu</i></a>
+
+           <ul class="right hide-on-med-and-down">
+
+               <!-- <input id="search" type="search" required>
+               <label class="label-icon" for="search"><i class="material-icons">search</i></label> -->
+
+
+
+             <li><a href="Recept.html"><i class="material-icons left">search</i>Sök</a></li>
+             <li><a href="Recept.html">Info</a></li>
+             <li><a href="Recept.html">Min sida</a></li>
+             <li><a href="Feedback.html">Feedback</a></li> 
+             <li><a href="Recept.html">Logga ut</a></li>
+           </ul>
+              <ul class="side-nav" id="mobile-demo">
+             <li><a href="Recept.html">Sök</a></li>
+             <li><a href="Recept.html">Info</a></li>
+             <li><a href="Recept.html">Min sida</a></li>
+             <li><a href="Feedback.html">Feedback</a></li> 
+             <li><a href="Recept.html">Logga ut</a></li>
+           </ul>
+         </div>
+       </nav>
+
+        <!-- Övre bakgrundsbilden -->
+    <div id="index-banner" class="parallax-container">
+        <div class="parallax"><img src="images/halftopstone.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+
+    <div class="row">
+
+            <!-- Kortet -->
+        <div class="container" class="col s12 m4">
+            <h3>Spagetti köttfärssås</h3>
+            <div class="card">
+                <div class="card-content #43a047 teal lighten-3">
+                  <div class="white-text"><p>Det finns tre flikar med mer information om receptet. Receptets ingredienser, hur det ska lagas och antal pro/kol/fett/kal det innehåller.</p></div>
+                </div>
+        <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#test4" class="black-text">Ingredienser</a></li>
+            <li class="tab"><a href="#test5" class="black-text">Gör så</a></li>
+            <li class="tab"><a class="active black-text" href="#test6">Näringsinnehåll</a></li>
+            </ul>
+        </div>
+            <div class="card-content #43a047 teal lighten-3">
+            <div class="white-text" id="test4">
+                <ul>
+              <li>  125 g nötfärs</li>
+              <li>  3/10 gul lök (skalad och hackad)</li>
+              <li>  1/2 vitlöksklyftor (skalade och finhackade)</li>
+              <li>  1/2 morötter (skalade och rivna)</li>
+              <li>  1/2 msk matolja</li>
+              <li>  1/10 dl tomatpuré</li>
+              <li>  125 g krossade tomater</li>
+              <li>  1/2 dl hönsbuljong</li>
+              <li>  1/2 msk kinesisk soja</li>
+              <li>  salt och svartpeppar</li>
+              <li>  1 portioner spaghetti</li>
+                </ul>
+                <div class="divider"></div>
+                <ul>
+              <h5>  Till servering</h5>
+              <li>  parmesanost</li>
+              <li>  körsbärstomater</li>
+                </ul>
+                </div>
+            <div class="white-text" id="test5">
+                <ul>
+                    <li> 1. Bryn köttfärsen och grönsakerna i oljan, tillsätt tomatpuré och bryn med den ett tag.</li>
+                    <li> 2. Tillsätt krossade tomater, hönsbuljong och soja, koka sakta 15 minuter, smaksätt med salt och peppar.</li>
+                    <li> 3. Koka spagetti enligt anvisningen på förpackningen.</li>
+                    <li> 4. Till servering: Servera med riven parmesanost och körsbärstomater.</li>
+                </ul>
+            </div>
+            <div class="white-text" id="test6">
+              Vi kan göra så att den startar i en viss flik, här kan vi ha diagrammet
+              <div style="width:100%">
+                  <canvas id="canvas"></canvas>
+            </div>
+
+          </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+        <!-- Nedre bakgrundsbilden -->
+    <div id="index-banner" class="parallax-container">
+        <div class="parallax"><img src="images/halfbottomstone.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+
+        <!-- Scripts -->
+
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/Chart.js"></script>
+          <script src="js/Chart.min.js"></script>
+        <script src="js/Chart.bundle.min.js"></script>
+          <script src="js/Chart.bundle.js"></script>
+
+          <script src="js/utils.js"></script>
+  <script src="js/radar.js"></script>
+
+    </body>
+</html>
