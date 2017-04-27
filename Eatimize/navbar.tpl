@@ -1,3 +1,8 @@
+<html>
+    <head>
+<script src="navbar.js"></script>
+</head>
+    
 <nav class="teal lighten-3">
     <div class="nav-wrapper">
 
@@ -28,3 +33,4 @@
       </ul>
     </div>
   </nav>
+</html>
