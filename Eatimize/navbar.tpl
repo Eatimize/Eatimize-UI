@@ -3,7 +3,7 @@
 <script src="navbar.js"></script>
 </head>
     
-<nav class="teal lighten-3">
+<nav class="lime lighten-2">
     <div class="nav-wrapper">
 
       <a href="index1.html" class="brand-logo">EATIMIZE</a>
