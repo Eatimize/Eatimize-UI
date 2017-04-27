@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>EATIMIZE</title>
@@ -9,107 +9,135 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  </head>
 
-<!-- Kod för att flytta "Eatimize" i nav en bit åt höger -->    
-  <style>
-            .row {
-                padding: 10px;
-            }
+    <!-- Navigation  -->
+    <nav class="teal lighten-3">
+    <div class="nav-wrapper">
 
-            .brand-logo {
-                margin-left: 20px;
-            }
+      <a href="#!" class="brand-logo">EATIMIZE</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse">
+        <i class="material-icons">menu</i></a>
 
+        <ul class="right hide-on-med-and-down">
 
-  </style>
+          <li><a href="Recept.html"><i class="material-icons left">search</i>Sök</a></li>
+          <li><a href="Recept.html">Info</a></li>
+          <li><a href="Recept.html">Min sida</a></li>
+          <li><a href="Feedback.html">Feedback</a></li>
+          <li><a href="Recept.html">Logga ut</a></li>
+        </ul>
 
-</head>
-
-
-<nav class="teal lighten-3">
-<div class="nav-wrapper">
-
-  <a class="brand-logo" href="#!">EATIMIZE</a>
-  <a href="#" data-activates="mobile-demo" class="button-collapse">
-      <i class="material-icons">menu</i></a>
-
-  <ul class="right hide-on-med-and-down">
-      
-    
-
-      <!-- <input id="search" type="search" required>
-      <label class="label-icon" for="search"><i class="material-icons">search</i></label> -->
-
-
-
-    <li><a href="Recept.html"><i class="material-icons left">search</i>Sök</a></li>
-    <li><a href="Recept.html">Info</a></li>
-    <li><a href="Recept.html">Min sida</a></li>
-    <li><a href="Feedback.html">Feedback</a></li>  
-    <li><a href="Recept.html">Logga ut</a></li>
-  </ul>
      <ul class="side-nav" id="mobile-demo">
-    <li><a href="Recept.html">Sök</a></li>
-    <li><a href="Recept.html">Info</a></li>
-    <li><a href="Recept.html">Min sida</a></li>
-    <li><a href="Feedback.html">Feedback</a></li>  
-    <li><a href="Recept.html">Logga ut</a></li>
-  </ul>
+       <li><a href="Recept.html">Sök</a></li>
+       <li><a href="Recept.html">Info</a></li>
+       <li><a href="Recept.html">Min sida</a></li>
+       <li><a href="Feedback.html">Feedback</a></li>
+       <li><a href="Recept.html">Logga ut</a></li>
+     </ul>
 </div>
 </nav>
 
-  <div id="index-banner" class="parallax-container">
 
+  <!-- Top parallax  -->
+  <div id="index-banner" class="parallax-container">
     <div class="parallax"><img src="images/halftopstone.jpg" alt="Unsplashed background img 1"></div>
   </div>
-
-
+<div class="container">
+  <!-- Row of mealtype   -->
 <div class="row">
-  <div  class="col s12  m4 center-align ">
-    <div class="content ">
 
-        <a href="Recept.html"><div id="mat1">
+    <!-- Column  -->
+    <div  class="col s12  m4 center-align ">
+      <div class="content ">
+        <a onclick="storageMealtypefrukost();" href="Recept.html"><div id="mat1">
         <img  src="images/mat111.png" alt="" class=" responsive-img ">
-      </div></a>
+        </div></a>
           </div>
     </div>
+
+    <!-- Column  -->
     <div  class="col s12 m4 center-align ">
       <div class="content">
-
-          <a href="Recept.html"><div id="mat1">
+          <a onclick="storageMealtypemellanmal();" href="Recept.html"><div id="mat1">
             <img  src="images/mat222.png" alt="" class=" responsive-img">
           </div></a>
             </div>
       </div>
 
+
+    <!-- Column  -->
       <div  class="col s12 m4 center-align ">
         <div class="content">
-            <a href="Recept.html"><div id="mat1">
+            <a onclick="storageMealtypemaltid();"  href="Recept.html"><div id="mat1">
               <img  src="images/mat333.png" alt="" class=" responsive-img">
             </div></a>
               </div>
         </div>
-
-
     </div>
 
+  <!-- Row of preferences   -->
+    <div class="row">
+      <!-- Column  -->
+        <div  class="col s12 center-align ">
+          <div class="content">
+            <!-- Modal Trigger -->
+             <a class="waves-effect waves-teal btn-flat" href="#modal1">Mat preferencer</a>
 
+              <!-- Modal Structure -->
+              <div id="modal1" class="modal ">
 
+                       <div class="modal-content">
+
+                         <h4Mat preferencer</h4>
+                         <p>Välj typer av mat preferenser</p>
+            <form action="#">
+            <p>
+              <input type="checkbox" id="indeterminate-Veg" />
+              <label for="indeterminate-Veg">Vegan</label>
+            </p>
+            <p>
+              <input type="checkbox" id="indeterminate-glutten" />
+              <label for="indeterminate-glutten">Gluttenfri</label>
+            </p>
+            <p>
+              <input type="checkbox" id="indeterminate-inganott" />
+              <label for="indeterminate-inganott">Inga nötter</label>
+            </p>
+            <p>
+              <input type="checkbox" id="indeterminate-lakto" />
+              <label for="indeterminate-lakto">Laktosfri</label>
+            </p>
+            <p>
+              <input type="checkbox" id="indeterminate-mjolkprot" />
+              <label for="indeterminate-mjolkprot">Mjölkproteinfri</label>
+            </p>
+
+          </form>
+            </div>
+                       <div class="modal-footer">
+                         <a onclick="checkPref();"  href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Klar</a>
+                       </div>
+                     </div>
+                </div>
+          </div>
+        </div>
+    </div>
+  <!-- Bottom parallax  -->
   <div class="parallax-container valign-wrapper">
-
     <div class="parallax"><img src="images/halfbottomstone.jpg" alt="Unsplashed background img 3"></div>
+
   </div>
 
+  <!-- Footer  -->
   <footer class="page-footer teal lighten-3">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="brand-logo">EATIMIZE</h5>
         </div>
-
       </div>
     </div>
-  
   </footer>
 
 
@@ -117,6 +145,8 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/storage.js"></script>
+
 
   </body>
 </html>
