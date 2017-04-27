@@ -87,7 +87,7 @@ var baseUrl = "http://localhost:8080/api/1/"+activity+"/"+sex+"/"+weight+"/"+hei
     url: baseUrl,
     dataType: "?",
     success: function (response) {
-
+  console.log(response);
     },
     fail: function (response) {
       console.log(response);
