@@ -1,11 +1,16 @@
 $(document).ready(function(){
-
+  $('#searchBtn').click(function(){
+                  var  res =  sessionStorage.getItem("searchField");
+                 if(res!=null){
+                   //Send information to api with keyword.
+                 }
+       });
             getResult();
-        
+
     });
 
     function getResult(){
-          
+
              var  activity = sessionStorage.getItem("actvity");
              var  sex =  sessionStorage.getItem("sex");
              var  weight = sessionStorage.getItem("weight");
@@ -24,39 +29,38 @@ $(document).ready(function(){
                     console.log("json-metod");
 
                      console.log(response);
-                     
+
                      printRes(response);
-                     
+
                  }, fail: function (response) {
                      console.log(response);
                  }
-                 
+
                 });
-                    
-                
+
+
                 }
 
     function printRes(res){
                 var response = res;
-                     
+
                     console.log(res[0]);
-                     
+
                     $.each(response, function(index, item){
-                            
+
                     $.get("keycard.tpl", function(data){
-                            
+
                     $(".row").append(replaceContent(data, [{"title": response[index].vegan, "description": response[index].description}]));
-                        
-                    });   
-                    }); 
+
+                    });
+                    });
             }
-             
-            //Ersätt titel och beskrivning: 
+
+            //Ersätt titel och beskrivning:
             function replaceContent(e,t){
                 res=e;
                 for(var n=0;n<t.length;n++){
-                    res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){                    
+                    res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){
                         return t[n][r]})}
                 return res
             }
-      
