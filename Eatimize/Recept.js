@@ -1,4 +1,6 @@
+var array;
 $(document).ready(function(){
+
   $('#searchBtn').click(function(){
                   var  res =  sessionStorage.getItem("searchField");
                  if(res!=null){
@@ -6,7 +8,7 @@ $(document).ready(function(){
                  }
        });
             getResult();
-
+            
     });
 
     function getResult(){
@@ -43,17 +45,18 @@ $(document).ready(function(){
 
     function printRes(res){
                 var response = res;
-
+                array=response;
                     console.log(res[0]);
-
+                    console.log(array)
                     $.each(response, function(index, item){
 
                     $.get("keycard.tpl", function(data){
 
-                    $(".row").append(replaceContent(data, [{"title": response[index].vegan, "description": response[index].description}]));
+                    $(".row").append(replaceContent(data, [{"id":index ,"title": response[index].vegan, "description": response[index].description}]));
 
                     });
                     });
+                  console.log(array[1]);
             }
 
             //Ersätt titel och beskrivning:
@@ -64,3 +67,11 @@ $(document).ready(function(){
                         return t[n][r]})}
                 return res
             }
+
+
+
+        $(".clickedCard").click(function(){
+                console.log(array[1]);
+                var clickedCard = array[this.id];
+                sessionStorage.setItem("card", clickedCard);
+            });
