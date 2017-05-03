@@ -51,18 +51,12 @@
   height: 100% !important;
   margin: 0px !important;
 }
-nav ul a,
-nav .brand-logo {
-  color: #444;
-}
+
 
 p {
   line-height: 2rem;
 }
 
-.button-collapse {
-  color: #26a69a;
-}
 
 
 .parallax-container {
