@@ -21,6 +21,17 @@
               
                 }            
             });
-        });   
+        }); 
+     
+         $('#searchMob').keyup(function(e){
+                if(e.keyCode == 13){
+          
+                document.location.href = "Recept.html";
+                res = $('#searchField').val();
+                sessionStorage.setItem("searchField", res);
+              
+                }            
+            });
+     
  });
      

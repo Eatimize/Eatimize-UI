@@ -1,6 +1,7 @@
 <html>
     <head>
 <script src="navbar.js"></script>
+        
 </head>
 
 <nav class="green">
@@ -19,7 +20,14 @@
         <li><a href="Recept.html">Logga ut</a></li>
       </ul>
          <ul class="side-nav" id="mobile-demo">
-        <li><a href="Recept.html">Sök</a></li>
+     <!--   <li><a href="Recept.html">Sök</a></li> -->
+             <li> <div class="input-field col s5">
+        
+                 <input id="searchMob" type="text" class="validate">
+    
+                 <label>Sök</label>
+       
+                 </div></li>
         <li><a href="Recept.html">Info</a></li>
         <li><a href="Recept.html">Min sida</a></li>
         <li><a href="Recept.html">Logga ut</a></li>
