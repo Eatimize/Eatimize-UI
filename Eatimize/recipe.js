@@ -14,6 +14,9 @@ $(document).ready(function(){
     sessionStorage.setItem("scoreProt", scoreProt);
     console.log(description+" "+recipeName+" "+scoreCarb+" "+scoreFat+" "+scoreKcal+" "+scoreProt);
     $('#title').append(recipeName);
+
+    description.replace(/\n/g, "<br />");
+
     $('#description').append(description);
 
   $.each(ingredients, function(index){
