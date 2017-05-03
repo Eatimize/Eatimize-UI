@@ -71,6 +71,6 @@ $(document).ready(function(){
 
           function clickedCard(ref){
                     console.log(ref.id);
-                    var clickedCard = array[ref.id];
+                    var clickedCard = JSON.stringify(array[ref.id]);
                     sessionStorage.setItem("card", clickedCard);
                 }

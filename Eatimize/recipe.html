@@ -40,20 +40,27 @@
 
             <!-- Kortet -->
         <div class="container" class="col s12 m4">
-            <h3>Spagetti köttfärssås</h3>
+            
+            <h3 id = "title"></h3>
+            
             <div class="card">
                 <div class="card-content green">
                   <div class="white-text"><p>Det finns tre flikar med mer information om receptet. Receptets ingredienser, hur det ska lagas och antal pro/kol/fett/kal det innehåller.</p></div>
                 </div>
         <div class="card-tabs">
             <ul class="tabs tabs-fixed-width">
-            <li class="tab"><a href="#test4" class="black-text">Ingredienser</a></li>
-            <li class="tab"><a href="#test5" class="black-text">Gör så</a></li>
-            <li class="tab"><a class="active black-text" href="#test6">Näringsinnehåll</a></li>
+                
+            <li class="tab"><a href="#ingridiens" class="black-text">Ingredienser</a></li>
+                
+            <li class="tab"><a href="#description" class="black-text">Gör så</a></li>
+                
+            <li class="tab"><a class="active black-text" href="#diagram">Näringsinnehåll</a></li>
+                
             </ul>
         </div>
             <div class="card-content green">
-            <div class="white-text" id="test4">
+                
+            <div class="white-text" id="ingridiens">
                 <ul>
               <li>  125 g nötfärs</li>
               <li>  3/10 gul lök (skalad och hackad)</li>
@@ -74,15 +81,17 @@
               <li>  körsbärstomater</li>
                 </ul>
                 </div>
-            <div class="white-text" id="test5">
-                <ul>
+            <div class="white-text" id="description">
+               <!-- <ul>
                     <li> 1. Bryn köttfärsen och grönsakerna i oljan, tillsätt tomatpuré och bryn med den ett tag.</li>
                     <li> 2. Tillsätt krossade tomater, hönsbuljong och soja, koka sakta 15 minuter, smaksätt med salt och peppar.</li>
                     <li> 3. Koka spagetti enligt anvisningen på förpackningen.</li>
-                    <li> 4. Till servering: Servera med riven parmesanost och körsbärstomater.</li>
-                </ul>
+                    <li> 4. Till servering: Servera med riven parmesanost och körsbärstomater.</li> 
+                </ul> -->
+                
+                
             </div>
-            <div class="white-text" id="test6">
+            <div class="white-text" id="diagram">
               Vi kan göra så att den startar i en viss flik, här kan vi ha diagrammet
               <div style="width:100%">
                   <canvas id="canvas"></canvas>
@@ -101,6 +110,7 @@
     <div id="index-banner" class="parallax-container">
         <div class="parallax"><img src="images/halfbottomstone.jpg" alt="Unsplashed background img 1"></div>
     </div>
+          </div>
 
         <!-- Scripts -->
 
@@ -114,6 +124,8 @@
 
           <script src="js/utils.js"></script>
   <script src="js/radar.js"></script>
+          <script src="recipe.js"></script>
 
+      
     </body>
 </html>
