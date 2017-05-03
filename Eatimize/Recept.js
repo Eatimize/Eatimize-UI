@@ -1,6 +1,7 @@
 var array;
 $(document).ready(function(){
 
+
   $('#searchBtn').click(function(){
                   var  res =  sessionStorage.getItem("searchField");
                  if(res!=null){
@@ -8,7 +9,7 @@ $(document).ready(function(){
                  }
        });
             getResult();
-            
+
     });
 
     function getResult(){
@@ -68,10 +69,8 @@ $(document).ready(function(){
                 return res
             }
 
-
-
-        $(".clickedCard").click(function(){
-                console.log(array[1]);
-                var clickedCard = array[this.id];
-                sessionStorage.setItem("card", clickedCard);
-            });
+          function clickedCard(ref){
+                    console.log(ref.id);
+                    var clickedCard = array[ref.id];
+                    sessionStorage.setItem("card", clickedCard);
+                }

@@ -40,7 +40,7 @@ var randomScalingFactor = function() {
             },
             title: {
                 display: true,
-                text: 'Chart.js Radar Chart'
+                text: 'Näringsinnehåll'
             },
             scale: {
               ticks: {
