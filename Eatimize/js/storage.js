@@ -6,11 +6,11 @@ function storageMealtypefrukost(){
     sendinfo();
 }
 function storageMealtypemellanmal(){
-  sessionStorage.setItem("mealtype", "2");
+  sessionStorage.setItem("mealtype", "3");
     sendinfo();
 }
 function storageMealtypemaltid(){
-  sessionStorage.setItem("mealtype", "3");
+  sessionStorage.setItem("mealtype", "2");
   sendinfo();
 }
 
@@ -47,10 +47,10 @@ sessionStorage.setItem("actvity", "2.0");
   Gender
 */
 function sexWomen() {
-sessionStorage.setItem("sex", "women");
+sessionStorage.setItem("sex", "Female");
 }
 function sexMan() {
-sessionStorage.setItem("sex", "man");
+sessionStorage.setItem("sex", "Male");
 }
 
 /**

@@ -13,11 +13,10 @@ var randomScalingFactor = function() {
                 borderColor: window.chartColors.white,
                 pointBackgroundColor: window.chartColors.white,
                 data: [
-                    99,
-                    101,
-                    70,
-                    95,
-
+                      sessionStorage.getItem("scoreCarb")%,
+                      sessionStorage.getItem("scoreFat")%,
+                      sessionStorage.getItem("scoreKcal")%,
+                      sessionStorage.getItem("scoreProt")%,
                 ]
             }, {
                 label: "My Second dataset",
@@ -25,10 +24,10 @@ var randomScalingFactor = function() {
                 borderColor: window.chartColors.blue,
                 pointBackgroundColor: window.chartColors.blue,
                 data: [
-                  80,
-                  40,
-                  65,
-                  85,
+                  100%,
+                  100%,
+                  100%,
+                  100%,
 
                 ]
             },]
