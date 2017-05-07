@@ -10,7 +10,7 @@ html{
 	position: relative;
 	margin: auto;
 	height: 365px;
-  top: 40px;
+    top: 40px;
 	left: 0;
 	z-index: 200;
 	right: 0;
@@ -26,6 +26,7 @@ html{
 .box h1{
 	text-align:center;
 	font-size:30px;
+    padding-bottom: 7%;
 }
 
 .show{
