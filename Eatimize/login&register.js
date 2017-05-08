@@ -23,3 +23,6 @@ function register(){
 			cont = 0;
 		}
 }
+function logIn(){
+            document.location.href = "EATIMIZE.html";
+}
