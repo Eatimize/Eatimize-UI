@@ -2,12 +2,15 @@
     <head>
 <script src="navbar.js"></script>
         
+    
+        
 </head>
 
 <nav class="green">
     <div class="nav-wrapper">
 
-      <a href="index1.html" class="brand-logo">EATIMIZE</a>
+    <a href="index1.html" class="brand-logo"><img class="responsive-img" id="logo" src="images/logo.png"/></a>    
+        
       <a href="#" data-activates="mobile-demo" class="button-collapse">
           <i class="material-icons">menu</i></a>
 
