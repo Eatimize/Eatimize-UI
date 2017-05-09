@@ -61,7 +61,9 @@ sessionStorage.setItem("sex", "Female");
 function sexMan() {
 sessionStorage.setItem("sex", "Male");
 }
-
+$('.sex').click(function(){
+  $(this). toggleClass('clicked');
+});
 /**
   Information about user
 */

@@ -5,7 +5,9 @@ window.chartColors = {
 	green: 'rgb(75, 192, 192)',
 	blue: 'rgb(54, 162, 235)',
 	purple: 'rgb(153, 102, 255)',
-	grey: 'rgb(231,233,237)'
+	grey: 'rgb(231,233,237)',
+	black: 'rgb(255,255,255)',
+	white: 'rgb(0,0,0)'
 };
 
 window.randomScalingFactor = function() {

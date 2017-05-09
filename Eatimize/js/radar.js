@@ -9,7 +9,7 @@ var randomScalingFactor = function() {
             labels: ["Protein", "kolhydrater", "Fett", "Kcal"],
             datasets: [{
                 label: "My First dataset",
-                backgroundColor: color(window.chartColors.white).alpha(0.2).rgbString(),
+                backgroundColor: color(window.chartColors.black).alpha(0.2).rgbString(),
                 borderColor: window.chartColors.white,
                 pointBackgroundColor: window.chartColors.white,
                 data: [

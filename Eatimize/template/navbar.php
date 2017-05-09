@@ -1,16 +1,16 @@
 <html>
     <head>
-<script src="navbar.js"></script>
-        
-    
-        
+<script src="js/navbar.js"></script>
+
+
+
 </head>
 
 <nav class="green">
     <div class="nav-wrapper">
 
-    <a href="index1.html" class="brand-logo"><img class="responsive-img" id="logo" src="images/logo.png"/></a>    
-        
+    <a href="index1.html" class="brand-logo"><img class="responsive-img" id="logo" src="images/logo.png"/></a>
+
       <a href="#" data-activates="mobile-demo" class="button-collapse">
           <i class="material-icons">menu</i></a>
 
@@ -25,11 +25,11 @@
          <ul class="side-nav" id="mobile-demo">
      <!--   <li><a href="Recept.html">Sök</a></li> -->
              <li> <div class="input-field col s5">
-        
+
                  <input id="searchMob" type="text" class="validate">
-    
+
                  <label>Sök</label>
-       
+
                  </div></li>
         <li><a href="Recept.html">Info</a></li>
         <li><a href="Profile.html">Min sida</a></li>
