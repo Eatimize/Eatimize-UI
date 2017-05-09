@@ -18,7 +18,7 @@
      height: 100%;
 }
      #mat1{
-         background:url(mat111.png) no-repeat 0px 200px;
+     /*    background:url(images/mellis.png) no-repeat 0px 200px;*/
          width:100%;
          height:200px;
          margin: auto;
@@ -26,7 +26,7 @@
 
      #mat2{
 
-         background:url(mat222.png) no-repeat 0px 200px;
+      /*   background:url(images/lunch.png) no-repeat 0px 200px;*/
          width:100%;
          height:200px;
          margin: auto;
@@ -34,7 +34,7 @@
 
      #mat3{
 
-         background:url(mat333.png) no-repeat 0px 200px;
+    /*     background:url(mat333.png) no-repeat 0px 200px;*/
          width:100%;
          height:200px;
          margin: auto;
@@ -44,12 +44,14 @@
  }
  body{
 
-   background: url(../images/wh2marble.jpg);
+  /* background: url(../images/wh2marble.jpg);*/
+     background: url(../images/ep_naturalwhite.png);
 
  }
 .row {
   height: 100% !important;
   margin: 0px !important;
+    padding: 40px;
 }
 
 
@@ -57,13 +59,18 @@ p {
   line-height: 2rem;
 }
 
-
+/*.container {
+    margin: auto;
+    padding-bottom: 50px;
+}
+*/
 
 .parallax-container {
   min-height: 380px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
+    
 }
   .parallax-container .section {
     width: 100%;
