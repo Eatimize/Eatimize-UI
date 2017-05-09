@@ -51,7 +51,7 @@ $(document).ready(function(){
                     console.log(array)
                     $.each(response, function(index, item){
 
-                    $.get("keycard.php", function(data){
+                    $.get("template/keycard.php", function(data){
                     var score = Math.round(response[index].scoreTot*100);
 
                     $(".row").append(replaceContent(data, [{"id":index ,"title": response[index].recipeName,"scoreTot":score}]));

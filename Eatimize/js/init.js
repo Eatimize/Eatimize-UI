@@ -4,9 +4,9 @@
        $(document).ready(function(){
 
                 //detta fungerar bara om man kör från localhost eller i annan webbläsare än chrome:
-                $('#navbar').load('navbar.php');
+                $('#navbar').load('template/navbar.php');
 
-            }); 
+            });
 
     $('.button-collapse').sideNav();
     $('.parallax').parallax();

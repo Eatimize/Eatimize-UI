@@ -1,4 +1,4 @@
-<a onclick="clickedCard(this);" id= {{id}} href="recipe.html">
+<a onclick="clickedCard(this);" id= {{id}} href="receptSida.html">
     <div class="col s12 m4">
       <div class="card medium">
         <div class="card-image">
