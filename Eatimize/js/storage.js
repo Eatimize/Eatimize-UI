@@ -17,31 +17,40 @@ function storageMealtypemaltid(){
 //Goal
 function activtym() {
 sessionStorage.setItem("goal", "muskler");
+   document.location.href = "#R3";
 }
 function activtyv() {
 sessionStorage.setItem("goal", "vikt");
+   document.location.href = "#R3";
 }
 function activtyh() {
 sessionStorage.setItem("goal", "hälsosamt");
+   document.location.href = "#R3";
 }
 //Activty
 function activty1() {
 sessionStorage.setItem("actvity", "1.2");
+  document.location.href = "#R2";
 }
 function activty2() {
 sessionStorage.setItem("actvity", "1.3");
+  document.location.href = "#R2";
 }
 function activty3() {
 sessionStorage.setItem("actvity", "1.5");
+  document.location.href = "#R2";
 }
 function activty4() {
 sessionStorage.setItem("actvity", "1.7");
+  document.location.href = "#R2";
 }
 function activty5() {
 sessionStorage.setItem("actvity", "1.9");
+  document.location.href = "#R2";
 }
 function activty6() {
 sessionStorage.setItem("actvity", "2.0");
+  document.location.href = "#R2";
 }
 /**
   Gender

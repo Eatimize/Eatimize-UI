@@ -9,16 +9,24 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style-intro.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <style>
+        .parallax-container {
+          height: 150px;
+        }
+
+    </style>
 </head>
 <body>
- 
-    
+
+
     <!-- NAVBAR -->
     <div id="navbar"></div>
 
   <div id="index-banner" class="parallax-container">
       <div class="parallax"><img src="images/background11.jpg" alt="Unsplashed background img 1"></div>
       </div>
+
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row">
@@ -41,19 +49,61 @@
     </p>
     </div>
         </div>
+<!--
              <div class="NextBtn">
-    <a  class="waves-effect waves-light btn green" href="#R2"> Nästa -></a>
+    <a  class="waves-effect waves-light btn green"> Nästa -></a>
         </div>
+-->
             </div>
           </div>
       </div>
 
     </div>
 
+  <div class="parallax-container valign-wrapper">
+    <div class="parallax"><img src="images/background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+    <div class="container">
+    <div class="section">
+      <div class="row ">
+          <div class="col s12  ">
+           <H3 id="R3" class="header center green-text"> Hur ofta motionerar du?</H3>
+         </div>
+        <div id="question2" class="col s12 m4 push-s4 pull-s4 ">
 
+    <div class="containerGoal">
+    <p>
+      <input onclick="activty1();"  class="with-gap" name="group2" type="radio" id="indeterminate-1.2" />
+      <label id="label1.2" for="indeterminate-1.2"> Lite eller ingen motion alls/kontorsarbete </label>
+    </p>
+    <p>
+      <input onclick="activty2();" class="with-gap" name="group2" type="radio" id="indeterminate- 1,3" />
+      <label id="label1.3" for="indeterminate- 1,3">Lätt motion 1-3 gånger i veckan </label>
+    </p>
+    <p>
+      <input onclick="activty3();" class="with-gap" name="group2" type="radio" id="indeterminate-1,5" />
+      <label id="label1.5" for="indeterminate-1,5">Medel motion 3-5 gånger i veckan/fysiskt jobb </label>
+    </p>
+    <p>
+      <input onclick="activty4();" class="with-gap" name="group2"type="radio" id="indeterminate- 1,7" />
+      <label id="label1.7" for="indeterminate- 1,7">Tung motion 6-7 gånger i veckan </label>
+    </p>
+    <p>
+      <input  onclick="activty5();" class="with-gap" name="group2" type="radio" id="indeterminate-1,9" />
+      <label id="label1.9" for="indeterminate-1,9">Mycket tung motion 1-2 gånger per dag  </label>
+    </p>
+    <p>
+      <input onclick="activty6();" class="with-gap" name="group2" type="radio" id="indeterminate-2,0" />
+      <label id="label2.0" for="indeterminate-2,0">Elitidrottare under högsäsong </label>
+    </p>
+      </div>
 
+            </div>
+        </div>
+    </div>
+  </div>
 
-  <div class="container">
+<div class="container">
     <div class="section">
       </div>
     </div>
@@ -72,90 +122,44 @@
             <h5 id="R2about">Vad är ditt kön ?</h5>
     <div class="genderBtn">
 
-    <a onclick="sexMan();" class="waves-effect waves-light btn green"><img src="icons/rsz_1rsz_1male-480.png"> Man</a>
-     <a  onclick="sexWomen();"class="waves-effect waves-light btn green"><img src="icons/women.png"> Kvinna</a>
+    <a onclick="sexMan();" class="waves-effect waves-light btn green test">
+        <img src="icons/rsz_1rsz_1male-480.png"> Man</a>
+     <a  onclick="sexWomen();"class="waves-effect waves-light btn green test">
+         <img src="icons/women.png"> Kvinna</a>
     </div>
     <h5 id="R2about">Hur gammal är du ?</h5>
     <div class="aboutRow">
     <div class="input-field">
-      <input  value="" id="age" type="text" class="validate">
+      <input  value="" id="age" type="text" class="validate" placeholder="(28år)">
       <label class="active" for="age">Ålder</label>
     </div>
   </div>
     <h5 id="R2about">Hur lång är du ? </h5>
     <div class="aboutRow">
     <div class="input-field">
-      <input value="" id="tall" type="text" class="validate">
+      <input value="" id="tall" type="text" class="validate" placeholder="(185cm)">
       <label class="active" for="tall">Längd</label>
     </div>
   </div>
     <h5 id="R2about">Hur mycket väger du ? </h5>
     <div class="aboutRow">
     <div class="input-field">
-      <input value="" id="weight" type="text" class="validate">
+      <input value="" id="weight" type="text" class="validate" placeholder="(75kg)">
       <label class="active" for="weigh">Vikt</label>
     </div>
   </div>
-   <div class="NextBtn">
-    <a onclick="sumInfo();"class="waves-effect waves-light btn green" href="#R3"> Nästa -></a>
-        </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <div class="parallax-container valign-wrapper">
-    <div class="parallax"><img src="images/background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-    <div class="container">
-    <div class="section">
-      <div class="row ">
-          <div class="col s12  ">
-           <H3 id="R3" class="header center green-text"> Hur ofta motionera du?</H3>
-         </div>
-        <div class="col s12 m4 push-s4 pull-s4 ">
-
-    <div class="containerGoal">
-    <p>
-      <input onclick="activty1();"  class="with-gap" name="group2" type="radio" id="indeterminate-1.2" />
-      <label id="label1.2" for="indeterminate-1.2"> Lite eller ingen motion alls/kontorsarbete </label>
-    </p>
-    <p>
-      <input onclick="activty2();" class="with-gap" name="group2" type="radio" id="indeterminate- 1,3" />
-      <label id="label1.3" for="indeterminate- 1,3">Lätt motion 1-3 gånger i veckan </label>
-    </p>
-    <p>
-      <input onclick="activty3();" class="with-gap" name="group2" type="radio" id="indeterminate-1,5" />
-      <label id="label1.5" id="" for="indeterminate-1,5">Medel motion 3-5 gånger i veckan/fysiskt jobb </label>
-    </p>
-    <p>
-      <input onclick="activty4();" class="with-gap" name="group2"type="radio" id="indeterminate- 1,7" />
-      <label id="label1.7" for="indeterminate- 1,7">Tung motion 6-7 gånger i veckan </label>
-    </p>
-    <p>
-      <input  onclick="activty5();" class="with-gap" name="group2" type="radio" id="indeterminate-1,9" />
-      <label id="label1.9" for="indeterminate-1,9">Mycket tung motion 1-2 gånger per dag  </label>
-    </p>
-    <p>
-      <input onclick="activty6();" class="with-gap" name="group2" type="radio" id="indeterminate-2,0" />
-      <label id="label2.0" for="indeterminate-2,0">Elitidrottare under högsäsong </label>
-    </p>
-      </div>
-
     <div class="NextBtn">
-    <a class="waves-effect waves-light btn green"  href="index1.html"> Nästa -></a>
+    <a onclick="sumInfo();" class="waves-effect waves-light btn green"  href="index1.html"> Fortsätt  -></a>
+        </div>
         </div>
 
-            </div>
-        </div>
+      </div>
+
     </div>
   </div>
-  <div id="index-banner" class="parallax-container">
+    <div id="index-banner" class="parallax-container">
       <div class="parallax"><img src="images/background11.jpg" alt="Unsplashed background img 1"></div>
       </div>
-
 
 
   <!--  Scripts-->
