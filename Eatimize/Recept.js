@@ -52,8 +52,10 @@ $(document).ready(function(){
                     $.each(response, function(index, item){
 
                     $.get("keycard.tpl", function(data){
+                    var score = Math.round(response[index].scoreTot*100);
 
-                    $(".row").append(replaceContent(data, [{"id":index ,"title": response[index].vegan, "description": response[index].description}]));
+                    $(".row").append(replaceContent(data, [{"id":index ,"title": response[index].recipeName,"scoreTot":score}]));
+
 
                     });
                     });
@@ -71,6 +73,6 @@ $(document).ready(function(){
 
           function clickedCard(ref){
                     console.log(ref.id);
-                    var clickedCard = array[ref.id];
+                    var clickedCard = JSON.stringify(array[ref.id]);
                     sessionStorage.setItem("card", clickedCard);
                 }

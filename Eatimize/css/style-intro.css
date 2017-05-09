@@ -17,9 +17,6 @@
 #R2about{
     padding-bottom: 15px;
 }
-.clicked {
-  background-color: darkgreen!important;
-}
 .aboutRow{
     text-align: center;
     margin-left: 40%;
@@ -37,7 +34,6 @@
 #R3{
     padding-top: 5px;
     padding-bottom: 20px;
-    text-align: center;
 }
 #R3exercise{
     padding: 10px;
@@ -52,10 +48,4 @@
 }
 .NextBtn{
     padding: 20px;
-}
-@media screen and (max-width:480px)
-{
-    #question2{
-        margin-left: -100px;
-    }
 }
