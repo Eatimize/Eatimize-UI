@@ -3,15 +3,12 @@ var  restriction;
 //Mealtype
 function storageMealtypefrukost(){
   sessionStorage.setItem("mealtype", "1");
-    sendinfo();
 }
 function storageMealtypemellanmal(){
   sessionStorage.setItem("mealtype", "3");
-    sendinfo();
 }
 function storageMealtypemaltid(){
   sessionStorage.setItem("mealtype", "2");
-  sendinfo();
 }
 
 //Goal
@@ -76,36 +73,6 @@ function sumInfo() {
    sessionStorage.setItem("height", height);
    sessionStorage.setItem("weight",weight);
 }
-
-
-
-/**
- Send Information to the API and recives a response with data.
-*/
-function sendinfo() {
-var  activity = sessionStorage.getItem("actvity");
-var  sex =  sessionStorage.getItem("sex");
-var  weight = sessionStorage.getItem("weight");
-var  height =  sessionStorage.getItem("height");
-var  goal = sessionStorage.getItem("goal");
-var  age = sessionStorage.getItem("age");
-var  type = sessionStorage.getItem("mealtype");
-
-var baseUrl = "http://localhost:8080/api/1/"+activity+"/"+sex+"/"+weight+"/"+height+"/"+goal+"/"+age+"/"+type+"";
-//var baseUrl= ""http://localhost:8080/api/1/1.2/man/75/175/goal/25/type";
-  $.ajax({
-    type: "GET",
-    url: baseUrl,
-    dataType: "?",
-    success: function (response) {
-  console.log(response);
-    },
-    fail: function (response) {
-      console.log(response);
-    }
-  });
-}
-
 
 
 function modal(){
