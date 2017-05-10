@@ -5,15 +5,14 @@
 	var  goal = sessionStorage.getItem("goal");
 	var  age = sessionStorage.getItem("age");
 	
-function getinfo() {
+function getInfo() {
 	$("#activity").val(activity);
 	$("#sex").val(sex);
-	$("#goal").val(goal);
 	$("#weight").val(weight);
 	$("#height").val(height);
 	$("#goal").val(goal);
 	$("#age").val(age);
-	$("#goal").val(goal);
+
 };
 
 $(document).ready(function () {
