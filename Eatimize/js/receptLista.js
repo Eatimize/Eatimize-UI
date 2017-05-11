@@ -3,10 +3,18 @@ $(document).ready(function(){
 
 
   $('#searchBtn').click(function(){
-                  var  res =  sessionStorage.getItem("searchField");
-                 if(res!=null){
-                   //Send information to api with keyword.
-                 }
+    var  res =  sessionStorage.getItem("searchField");
+console.log("hej")
+if(res!=null && array!=null){
+var temp;
+var substring = res;
+$.each(array, function(index, item){
+temp[index] = array[index].recipeName.includes(substring);
+
+});
+res=null;
+printRes(temp);
+}
        });
             getResult();
 
@@ -47,6 +55,7 @@ $(document).ready(function(){
     function printRes(res){
                 var response = res;
                 array=response;
+                sessionStorage.setItem("array", array);
                     console.log(res[0]);
                     console.log(array)
                     $.each(response, function(index, item){

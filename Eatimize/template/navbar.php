@@ -15,8 +15,6 @@
           <i class="material-icons">menu</i></a>
 
       <ul class="right hide-on-med-and-down">
-
-
         <li id="searchBtn"><a>Sök<i class="material-icons left">search</i></a></li>
         <li><a href="EATIMIZE.html">Info</a></li>
         <li><a href="Profile.html">Min sida</a></li>
