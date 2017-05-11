@@ -1,20 +1,14 @@
 var array;
 $(document).ready(function(){
 
-  var  res =  sessionStorage.getItem("searchField");
-  console.log("hej")
- if(res!=null && array!=null){
-      var temp;
-      var substring = res;
-         $.each(array, function(index, item){
-          temp[index] = array[index].recipeName.includes(substring);
 
-          });
-          res=null;
-          printRes(temp);
- }
-
-       getResult();
+  $('#searchBtn').click(function(){
+                  var  res =  sessionStorage.getItem("searchField");
+                 if(res!=null){
+                   //Send information to api with keyword.
+                 }
+       });
+            getResult();
 
     });
 
