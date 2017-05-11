@@ -22,6 +22,8 @@ $(document).ready(function(){
   $.each(ingredients, function(index){
     console.log(ingredients[index]);
     var ing = ingredients[index].name;
+    var wei = Math.round(ingredients[index].weight * 100) / 100;
+    $('#ingredients').append('<li>'+ing+' '+wei+'g'+'</li>');
         });
     // uppdatera recipe-sidan med information:
 
