@@ -2,22 +2,29 @@ var array;
 $(document).ready(function(){
 
   var  res =  sessionStorage.getItem("searchField");
-  console.log("hej")
- if(res!=null && array!=null){
-      var temp;
-      var substring = res;
-         $.each(array, function(index, item){
-          temp[index] = array[index].recipeName.includes(substring);
 
-          });
-          res=null;
-          printRes(temp);
- }
 
        getResult();
+       $('#searchField').keyup(function(e){
+           if(e.keyCode == 13){
+            console.log("key pressed")
+           res = $('#searchField').val();
+           sessionStorage.setItem("searchField", res);
 
+          if(res!=null && array!=null){
+            console.log("inside if")
+               var temp;
+               var substring = res;
+                  $.each(array, function(index, item){
+                   temp[index] = array[index].recipeName.includes(substring);
+
+                   });
+                   res=null;
+                   printRes(temp);
+                 }
+           }
     });
-
+  });
     function getResult(){
 
              var  activity = sessionStorage.getItem("actvity");
