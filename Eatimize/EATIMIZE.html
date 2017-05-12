@@ -6,15 +6,17 @@
   <title>EATIMIZE</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style-intro.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style-intro.css" type="text/css" rel="stylesheet" media="screen,projection"/> 
 
     <style>
         .parallax-container {
           height: 150px;
         }
+        
     </style>
+    
 </head>
 <body>
 
@@ -23,7 +25,8 @@
     <div id="navbar"></div>
 
   <div id="index-banner" class="parallax-container">
-      <div class="parallax"><img src="images/background11.jpg" alt="Unsplashed background img 1"></div>
+      <div class="parallax">   
+<img src="images/background11.jpg" alt="Unsplashed background img 1"></div>
       </div>
 
     <div class="section no-pad-bot">
@@ -48,11 +51,7 @@
     </p>
     </div>
         </div>
-<!--
-             <div class="NextBtn">
-    <a  class="waves-effect waves-light btn green"> Nästa -></a>
-        </div>
--->
+
             </div>
           </div>
       </div>
@@ -119,13 +118,10 @@
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h3 id="R2" class="header center green-text">Om dig</h3>
             <h5 id="R2about">Vad är ditt kön ?</h5>
-    <div class="genderBtn">
-
-    <a onclick="sexMan();" class="waves-effect waves-light btn green sex">
-        <img src="icons/rsz_1rsz_1male-480.png"> Man</a>
-     <a  onclick="sexWomen();"class="waves-effect waves-light btn green sex">
-         <img src="icons/women.png"> Kvinna</a>
-    </div>
+            
+            <!-- TILLAGD AV KARRO -->
+       <div id="sexButtons"></div>          
+            
     <h5 id="R2about">Hur gammal är du ?</h5>
     <div class="aboutRow">
     <div class="input-field">
@@ -163,7 +159,7 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
+  <script src="js/materialize.js"></script> 
   <script src="js/init.js"></script>
   <script src="js/storage.js"></script>
   </body>
