@@ -1,0 +1,70 @@
+/* TA BORT MATERIALIZE-STYLES: */    
+
+[type="checkbox"] + label {
+            position: none;
+            padding-left: 0px;
+            cursor: pointer;
+            display: none;
+            height: 0px;
+            line-height: 0px;
+            font-size: 1rem; 
+            -webkit-user-select: none;
+            /* webkit (safari, chrome) browsers */
+            -moz-user-select: none;
+            /* mozilla browsers */
+            -khtml-user-select: none;
+            /* webkit (konqueror) browsers */
+            -ms-user-select: none;
+            /* IE10+ */
+        }
+        
+
+        
+        [type="checkbox"] + label:before,
+        [type="checkbox"]:not(.filled-in) + label:after {
+          content: none;
+          position: none;
+          top: 0;
+          left: 0;
+          width: 0px;
+          height: 0px;
+          z-index: 0;
+          border: 0px ;
+          border-radius: 0px;
+          margin-top: 0px;
+          transition: none;
+
+        }
+
+/* CSS FÖR CHECK-BOXES: */
+  input[type=checkbox] {    
+            display:none;  
+            padding: 40px;
+        }        
+        
+        .prefimg { 
+            height: 40px;
+            width: 40px;
+            margin-bottom: -15px;
+        }
+  
+        input[type=checkbox] + label {       
+            height: 40px;       
+            filter: grayscale();
+            display:inline-block;   
+            padding: 15px;
+            
+        }
+        
+           input[type=checkbox] + label span { 
+               padding: 10px;
+
+        }
+   
+        input[type=checkbox]:checked + label {
+            height: 40px;
+            filter: none;
+            display:inline-block;
+        }
+        
+        
