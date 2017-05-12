@@ -112,7 +112,12 @@ function saveChanges(){
 $(document).ready(function () {
 	$('select').material_select();
     getInfo();
+    
+    /* TILLAGT AV KARRO */ 
+     $('#prefButtons').load('/template/pref.php');
+            
 });
+
 
 
 
