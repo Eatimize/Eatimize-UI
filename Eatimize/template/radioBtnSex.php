@@ -6,12 +6,12 @@
                 
              $("#male, #female").change(function () {
                  if ($("#male").is(":checked")) {
-                    /* console.log("male");*/
-                    sessionStorage.setItem("sex", "male");
+
+                     sessionStorage.setItem("sex", "Male");
 
                  }else if ($("#female").is(":checked")) {
-                   /*  console.log("female");*/
-                sessionStorage.setItem("sex", "female");
+ 
+                     sessionStorage.setItem("sex", "Female");
  
                     }
                  });
@@ -81,10 +81,10 @@
     <body>
         <div class="sex-input">
             <input type="radio" id="male" name="gender" />
-                <label for="male"><span><img src="../icons/male.png" class="sex">Man</span></label>
+                <label for="male"><span><img src="icons/male.png" class="sex">Man</span></label>
 
                 <input type="radio" id="female" name="gender" />
-                <label for="female"><span><img src="../icons/female.png" class="sex">Kvinna</span></label> 
+                <label for="female"><span><img src="icons/female.png" class="sex">Kvinna</span></label> 
         </div>
     
     </body>
