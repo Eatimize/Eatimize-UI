@@ -1,25 +1,25 @@
 var array;
 $(document).ready(function(){
 
-
-  $('#searchBtn').click(function(){
+ $("#searchBtn").on('click', function() {
+     console.log("searchBtn lista")
+$('#searchField').keyup(function(e){
     var  res =  sessionStorage.getItem("searchField");
-console.log("hej")
-if(res!=null && array!=null){
-var temp;
-var substring = res;
-$.each(array, function(index, item){
-temp[index] = array[index].recipeName.includes(substring);
-
-});
-res=null;
-printRes(temp);
-}
+    console.log("searchField lista")
+    if(res!=null && array!=null){
+    var temp;
+    var substring = res;
+    $.each(array, function(index, item){
+    temp[index] = array[index].recipeName.includes(substring);
+        });
+    res=null;
+    printRes(temp);
+    }
        });
-            getResult();
-
     });
 
+        getResult();
+});
     function getResult(){
 
              var  activity = sessionStorage.getItem("actvity");
@@ -37,9 +37,6 @@ printRes(temp);
                  url: baseUrl,
                  dataType: "JSON",
                  success: function (response) {
-                    console.log("json-metod");
-
-                     console.log(response);
 
                      printRes(response);
 

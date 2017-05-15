@@ -8,6 +8,7 @@
 
 
      $("#searchBtn").on('click', function() {
+        console.log("searchBtn nav")
              $('#searchBtn').replaceWith(
         '<li> <div class="input-field col s5">'+
         '<input id="searchField" type="text" class="validate">' +
@@ -16,6 +17,7 @@
                );
 
             $('#searchField').keyup(function(e){
+                  console.log("searchField nav")
                 if(e.keyCode == 13){
                   if(lastPathSegment=="receptLista.html"){
                     res = $('#searchField').val();
@@ -25,14 +27,12 @@
                     sessionStorage.setItem("searchField", res);
                     document.location.href = "receptLista.html";
                   }
-
                 }
             });
         });
 
          $('#searchMob').keyup(function(e){
                 if(e.keyCode == 13){
-
                   if(lastPathSegment=="receptLista.html"){
                     res = $('#searchField').val();
                     sessionStorage.setItem("searchField", res);
@@ -40,10 +40,7 @@
                     res = $('#searchField').val();
                     sessionStorage.setItem("searchField", res);
                     document.location.href = "receptLista.html";
-
                   }
-
-
                 }
             });
 

@@ -13,15 +13,15 @@ function storageMealtypemaltid(){
 
 //Goal
 function activtym() {
-sessionStorage.setItem("goal", "muskler");
+sessionStorage.setItem("goal", 3);
    document.location.href = "#R3";
 }
 function activtyv() {
-sessionStorage.setItem("goal", "vikt");
+sessionStorage.setItem("goal",2);
    document.location.href = "#R3";
 }
 function activtyh() {
-sessionStorage.setItem("goal", "hälsosamt");
+sessionStorage.setItem("goal", 1);
    document.location.href = "#R3";
 }
 //Activty
