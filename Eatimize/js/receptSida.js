@@ -22,7 +22,8 @@ $(document).ready(function(){
   $.each(ingredients, function(index){
     console.log(ingredients[index]);
     var ing = ingredients[index].name;
-    $('#ingredients').append('<li>'+ing+'</li>');
+    var wei = ingredients[index].gram;
+    $('#ingredients').append('<li>'+ing+' '+wei+'g'+'</li>');
         });
     // uppdatera recipe-sidan med information:
 
