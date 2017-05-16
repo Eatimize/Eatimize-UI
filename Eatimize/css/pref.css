@@ -36,10 +36,10 @@
 
         }
 
-    /* CSS FÖR CHECK-BOXES: */
-        input[type=checkbox] {    
+/* CSS FÖR CHECK-BOXES: */
+  input[type=checkbox] {    
             display:none;  
-          /*  padding: 50px;*/
+            padding: 40px;
         }        
         
         .prefimg { 
@@ -52,7 +52,7 @@
             height: 40px;       
             filter: grayscale();
             display:inline-block;   
-            padding: 30px;
+            padding: 15px;
             
         }
         
