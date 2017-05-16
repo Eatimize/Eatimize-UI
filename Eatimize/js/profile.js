@@ -8,9 +8,9 @@
     /*preferenser*/   
     var  vegan = sessionStorage.getItem("vegan");
     var  vegetarian = sessionStorage.getItem("vegetarian");
-	var  gluten = sessionStorage.getItem("glutten");
-	var  nut = sessionStorage.getItem("notter");
-	var  laktos = sessionStorage.getItem("lakto");
+	var  gluten = sessionStorage.getItem("gluten");
+	var  nut = sessionStorage.getItem("nut");
+	var  laktos = sessionStorage.getItem("laktos");
 	var  milkprotein = sessionStorage.getItem("mjolkprot");
 
 	var editMode = false;

@@ -1,10 +1,35 @@
 <html>
     <head>
         <link href="css/pref.css" rel="stylesheet" type="text/css">    
-  <script>
-        
+  <script>   
+      
           $(document).ready(function(){
-                
+              
+              /*
+              
+              HÄMTA FRÅN SESSIONSTORAGE : 
+              */
+              
+            $('#gluten').prop('checked', sessionStorage.getItem("gluten"));  
+
+              
+            $('#laktos').prop('checked', sessionStorage.getItem("laktos"));  
+
+              
+            $('#milkprotein').prop('checked', sessionStorage.getItem("milkprotein"));  
+
+              
+            $('#vegetarian').prop('checked', sessionStorage.getItem("vegetarian"));  
+
+              
+            $('#vegan').prop('checked', sessionStorage.getItem("vegan"));  
+              
+            $('#nut').prop('checked', sessionStorage.getItem("nut"));  
+
+              
+              /* SLUT PÅ SESSONSTORAGE */
+              
+              
             $('.cb').click(function() {
                 
             /*    console.log($(this).attr("value") + ", " + $(this).is(":checked"));  
