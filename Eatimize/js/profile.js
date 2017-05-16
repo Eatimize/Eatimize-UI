@@ -5,7 +5,13 @@
 	var  goal = sessionStorage.getItem("goal");
 	var  age = sessionStorage.getItem("age");
 	
-    /* lägg till värden för preferenser också */ 
+    /*preferenser*/   
+    var  vegan = sessionStorage.getItem("vegan");
+    var  vegetarian = sessionStorage.getItem("vegetarian");
+	var  gluten = sessionStorage.getItem("glutten");
+	var  nut = sessionStorage.getItem("notter");
+	var  laktos = sessionStorage.getItem("lakto");
+	var  milkprotein = sessionStorage.getItem("mjolkprot");
 
 	var editMode = false;
 	
@@ -20,6 +26,13 @@ function getInfo() {
 	$("#sex").material_select();
 	$("#activity").material_select();
 	$("#goal").material_select();
+	
+	$("#gluten").val(gluten);
+	$("#laktos").val(laktos);
+	$("#nut").val(nut);
+	$("#vegetarian").val(vegetarian);
+	$("#vegan").val(vegan);
+	$("#milkprotein").val(milkprotein);	 
 };
 
 // Förmodligen tas bort
@@ -43,11 +56,12 @@ var sexArray = [];
 function editInformation(){
 
 	if(editMode) {
-		 enableForm();
-		 editMode = false;
-	}else{
-		restoreInformation();
-		editMode = true;
+			enableForm();
+        	editMode = false;
+
+	}else{	
+         restoreInformation();
+         editMode = true;
 	}
 }
 
@@ -107,6 +121,14 @@ function saveChanges(){
 	var  goal = $("#goal").val();
 	var  age = $("#age").val();
 	
+	/* PREFERENSER: */ 
+	var  gluten = $("#gluten").val();
+	var  laktos = $("#laktos").val();
+	var  nut = $("#nut").val();
+	var  vegetarian = $("#vegetarian").val();
+	var  vegan = $("#vegan").val();
+	var  milkprotein = $("#milkprotein").val();	 
+	
 	sessionStorage.setItem("activity", activity);
 	sessionStorage.setItem("sex", sex);
 	sessionStorage.setItem("weight", weight);
@@ -114,37 +136,39 @@ function saveChanges(){
 	sessionStorage.setItem("goal", goal);
 	sessionStorage.setItem("age", age);
 	
+	sessionStorage.setItem("gluten", gluten);
+    sessionStorage.setItem("laktos", laktos);
+    sessionStorage.setItem("nut", nut);
+    sessionStorage.setItem("vegetarian", vegetarian);
+    sessionStorage.setItem("vegan", vegan);
+    sessionStorage.setItem("milkprotein", milkprotein); 
+	
 	$("#activity").prop("disabled", true);
 	$("#sex").prop("disabled", true);
 	$("#weight").prop("disabled", true);
 	$("#height").prop("disabled", true);
 	$("#goal").prop("disabled", true);
 	$("#age").prop("disabled", true);
-    
-    /* PREFERENSER: */ 
+      
+	$("#sex").material_select();
+	$("#activity").material_select();
+	$("#goal").material_select();
+		    
 	$("#gluten").prop("disabled", true);
 	$("#laktos").prop("disabled", true);
     $("#nut").prop("disabled", true);
     $("#vegetarian").prop("disabled", true);
 	$("#vegan").prop("disabled", true);
-    $("#milkprotein").prop("disabled", true);
+    $("#milkprotein").prop("disabled", true);	
     
-
-    
-	$("#sex").material_select();
-	$("#activity").material_select();
-	$("#goal").material_select();
-		
 }
 	
 $(document).ready(function () {
-
-    
-    /* TILLAGT AV KARRO */ 
-     $('#prefButtons').load('/template/pref.php');
-    	
-    $('select').material_select();
+   $('select').material_select();
     getInfo();
+    
+        /* TILLAGT AV KARRO */ 
+     $('#prefButtons').load('/template/pref.php');
 	
 });
 
