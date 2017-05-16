@@ -5,6 +5,8 @@
 	var  goal = sessionStorage.getItem("goal");
 	var  age = sessionStorage.getItem("age");
 	
+    /* lägg till värden för preferenser också */ 
+
 	var editMode = false;
 	
 function getInfo() {
@@ -58,6 +60,14 @@ function enableForm() {
 	$("#height").prop("disabled", false);
 	$("#goal").prop("disabled", false);
 	$("#age").prop("disabled", false);
+    
+    /* PREFERENSER: */
+	$("#gluten").prop("disabled", false);
+	$("#laktos").prop("disabled", false);
+    $("#nut").prop("disabled", false);
+    $("#vegetarian").prop("disabled", false);
+	$("#vegan").prop("disabled", false);
+    $("#milkprotein").prop("disabled", false);
 	
 	$("#sex").material_select();
 	$("#activity").material_select();
@@ -73,6 +83,14 @@ function restoreInformation(){
 	$("#height").prop("disabled", true);
 	$("#goal").prop("disabled", true);
 	$("#age").prop("disabled", true);
+    
+    /* PREFERENSER: */ 
+	$("#gluten").prop("disabled", true);
+	$("#laktos").prop("disabled", true);
+    $("#nut").prop("disabled", true);
+    $("#vegetarian").prop("disabled", true);
+	$("#vegan").prop("disabled", true);
+    $("#milkprotein").prop("disabled", true);
 	
 	$("#sex").material_select();
 	$("#activity").material_select();
@@ -102,7 +120,17 @@ function saveChanges(){
 	$("#height").prop("disabled", true);
 	$("#goal").prop("disabled", true);
 	$("#age").prop("disabled", true);
-	
+    
+    /* PREFERENSER: */ 
+	$("#gluten").prop("disabled", true);
+	$("#laktos").prop("disabled", true);
+    $("#nut").prop("disabled", true);
+    $("#vegetarian").prop("disabled", true);
+	$("#vegan").prop("disabled", true);
+    $("#milkprotein").prop("disabled", true);
+    
+
+    
 	$("#sex").material_select();
 	$("#activity").material_select();
 	$("#goal").material_select();
@@ -110,12 +138,14 @@ function saveChanges(){
 }
 	
 $(document).ready(function () {
-	$('select').material_select();
-    getInfo();
+
     
     /* TILLAGT AV KARRO */ 
      $('#prefButtons').load('/template/pref.php');
-            
+    	
+    $('select').material_select();
+    getInfo();
+	
 });
 
 
