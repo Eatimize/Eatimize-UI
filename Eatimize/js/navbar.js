@@ -15,7 +15,7 @@
             $('#searchField').keyup(function(e){
                 if(e.keyCode == 13){
           
-                document.location.href = "Recept.html";
+                document.location.href = "receptLista.html";
                 res = $('#searchField').val();
                 sessionStorage.setItem("searchField", res);
               
@@ -26,7 +26,7 @@
          $('#searchMob').keyup(function(e){
                 if(e.keyCode == 13){
           
-                document.location.href = "Recept.html";
+                document.location.href = "receptLista.html";
                 res = $('#searchField').val();
                 sessionStorage.setItem("searchField", res);
               
