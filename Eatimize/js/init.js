@@ -3,9 +3,10 @@
 
        $(document).ready(function(){
 
-                //detta fungerar bara om man kör från localhost eller i annan webbläsare än chrome:
-                $('#navbar').load('template/navbar.php');
-
+            $('#navbar').load('template/navbar.php');    
+          
+          //Gäller bara för EATIMIZE.html
+           $('#sexButtons').load('template/radioBtnSex.php');
             });
 
     $('.button-collapse').sideNav();
