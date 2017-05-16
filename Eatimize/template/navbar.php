@@ -1,7 +1,7 @@
 <html>
     <head>
 <script src="js/navbar.js"></script>
-
+<script src="js/receptLista.js"></script>
 
 
 </head>
