@@ -74,6 +74,10 @@
     @media screen and (min-width: 681px) and (max-width: 1100px)
 { 
         #preferences{
-            margin-left: 260px;
+            margin-left: 30%;
 }
 }
+@media screen and (min-width: 1101px){ 
+    #preferences{
+            margin-left: 41%;
+    }
