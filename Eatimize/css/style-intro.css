@@ -34,6 +34,10 @@
 #weight{
     text-align: center;
 }
+#sexButtons{
+    text-align: center;
+    margin-right: 40px;
+}
 #R3{
     padding-top: 5px;
     padding-bottom: 20px;
@@ -50,12 +54,26 @@
 #exercise{
     text-align: center;
 }
+#preferences{
+    margin-left: 450px;
+}
+
 .NextBtn{
+    text-align: center;
     padding: 20px;
 }
-@media screen and (max-width:480px)
+@media screen and (max-width:680px)
 {
     #question2{
         margin-left: -100px;
     }
+    #preferences{
+    margin-left: 20%;
+}
+}
+    @media screen and (min-width: 681px) and (max-width: 1100px)
+{ 
+        #preferences{
+            margin-left: 260px;
+}
 }
