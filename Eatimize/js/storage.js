@@ -72,7 +72,19 @@ function sumInfo() {
    sessionStorage.setItem("age", age);
    sessionStorage.setItem("height", height);
    sessionStorage.setItem("weight",weight);
+
+if (age == ""|| tall == "" || weight == "")  
+{  
+document.location.href = "#age";  
+return false;  
+}  
+else {
+     document.location.href = "mealType.html";
 }
+   
+}
+
+
 
 
 function modal(){
