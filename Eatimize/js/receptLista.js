@@ -11,7 +11,7 @@ $(document).ready(function(){
 });
     function getResult(){
 
-             var  activity = sessionStorage.getItem("actvity");
+             var  activity = sessionStorage.getItem("activity");
              var  sex =  sessionStorage.getItem("sex");
              var  weight = sessionStorage.getItem("weight");
              var  height =  sessionStorage.getItem("height");

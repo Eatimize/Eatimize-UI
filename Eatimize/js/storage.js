@@ -12,15 +12,15 @@ function storageMealtypemaltid(){
 }
 
 //Goal
-function activtym() {
+function activitym() {
 sessionStorage.setItem("goal", 3);
    document.location.href = "#R3";
 }
-function activtyv() {
+function activityv() {
 sessionStorage.setItem("goal",2);
    document.location.href = "#R3";
 }
-function activtyh() {
+function  activityh() {
 sessionStorage.setItem("goal", 1);
    document.location.href = "#R3";
 }
