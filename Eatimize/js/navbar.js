@@ -2,8 +2,16 @@
  $(document).ready(function(){
    var href = document.location.href;
    var lastPathSegment = href.substr(href.lastIndexOf('/') + 1);
-   console.log(href);
-   console.log(lastPathSegment);
+  if(lastPathSegment!="receptLista.html" || lastPathSegment!="receptSida.html"){
+    console.log("HEJ");
+       $("#searchBtn").empty();
+  }
+  if(lastPathSegment=="receptLista.html" || lastPathSegment=="receptSida.html"){
+    console.log("HEJdå");
+       $("#searchBtn").append(
+  '<a>Sök<i class="material-icons left">search</i></a>'
+         );
+  }
      $(".button-collapse").sideNav();
 
 
@@ -17,7 +25,6 @@
                );
 
             $('#searchField').keyup(function(e){
-                  console.log("searchField nav")
                 if(e.keyCode == 13){
                   if(lastPathSegment=="receptLista.html"){
                     res = $('#searchField').val();

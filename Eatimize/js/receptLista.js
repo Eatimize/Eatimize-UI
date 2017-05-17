@@ -1,24 +1,13 @@
 var array;
 $(document).ready(function(){
+  var href = document.location.href;
+  var lastPathSegment = href.substr(href.lastIndexOf('/') + 1);
 
- $("#searchBtn").on('click', function() {
-     console.log("searchBtn lista")
-$('#searchField').keyup(function(e){
-    var  res =  sessionStorage.getItem("searchField");
-    console.log("searchField lista")
-    if(res!=null && array!=null){
-    var temp;
-    var substring = res;
-    $.each(array, function(index, item){
-    temp[index] = array[index].recipeName.includes(substring);
-        });
-    res=null;
-    printRes(temp);
+    if(lastPathSegment=="receptLista.html"){
+      getResult();
     }
-       });
-    });
+    search();
 
-        getResult();
 });
     function getResult(){
 
@@ -37,7 +26,8 @@ $('#searchField').keyup(function(e){
                  url: baseUrl,
                  dataType: "JSON",
                  success: function (response) {
-
+                   var array=JSON.stringify(response);
+                   sessionStorage.setItem("array", array);
                      printRes(response);
 
                  }, fail: function (response) {
@@ -50,22 +40,19 @@ $('#searchField').keyup(function(e){
                 }
 
     function printRes(res){
-                var response = res;
+                response = res;
                 array=response;
-                sessionStorage.setItem("array", array);
-                    console.log(res[0]);
-                    console.log(array)
-                    $.each(response, function(index, item){
+                $( ".card" ).remove();
 
+                    $.each(response, function(index, item){
                     $.get("template/keycard.php", function(data){
                     var score = Math.round(response[index].scoreTot*100);
 
                     $(".row").append(replaceContent(data, [{"id":index ,"title": response[index].recipeName,"scoreTot":score}]));
 
+                      });
+                });
 
-                    });
-                    });
-                  console.log(array[1]);
             }
 
             //Ersätt titel och beskrivning:
@@ -78,7 +65,36 @@ $('#searchField').keyup(function(e){
             }
 
           function clickedCard(ref){
-                    console.log(ref.id);
-                    var clickedCard = JSON.stringify(array[ref.id]);
-                    sessionStorage.setItem("card", clickedCard);
+                                console.log(ref.id);
+                               var clickedCard = JSON.stringify(array[ref.id]);
+                               sessionStorage.setItem("card", clickedCard);
+                }
+
+                function search(){
+                  $("#searchBtn").on('click', function() {
+
+                 $('#searchField').keyup(function(e){
+                   if(e.keyCode == 13){
+                     $( ".card" ).remove();
+                     var array = JSON.parse(sessionStorage.getItem("array"));
+                     var  substring =  sessionStorage.getItem("searchField");
+                     var temp= new Array();
+                     var counter=0;
+
+                     $.each(array, function(index, item){
+                            temp[index] = array[index];
+                            counter++;
+                            }
+
+                         });
+
+
+                     if(counter>0){
+                        console.log("TEMP ARRAY "+temp);
+                        printRes(temp);
+                     }
+
+                   }
+                        });
+                     });
                 }

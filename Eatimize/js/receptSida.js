@@ -15,7 +15,7 @@ $(document).ready(function(){
     console.log(description+" "+recipeName+" "+scoreCarb+" "+scoreFat+" "+scoreKcal+" "+scoreProt);
     $('#title').append(recipeName);
 
-    description.replace(/\n/g, "<br />");
+    
 
     $('#description').append(description);
 
