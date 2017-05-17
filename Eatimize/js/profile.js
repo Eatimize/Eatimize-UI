@@ -49,7 +49,7 @@ function getInfo() {
 	if(nut == "true"){
 		$("#nut").prop("checked", true);
 	}else {
-		$("#glunutten").prop("checked", false);
+		$("#nut").prop("checked", false);
 	}
 	
 	if(vegetarian == "true"){
@@ -69,6 +69,8 @@ function getInfo() {
 	}else {
 		$("#milkprotein").prop("checked", false);
 	}
+	
+	console.log(gluten);
 };
 
 function editInformation(){
@@ -154,8 +156,7 @@ function saveChanges(){
 	sessionStorage.setItem("height", height);
 	sessionStorage.setItem("goal", goal);
 	sessionStorage.setItem("age", age);
-	
-	
+		
 	checkPref();
 	
 	$("#activity").prop("disabled", true);
@@ -189,9 +190,7 @@ $(document).ready(function () {
      $("#nut").prop("disabled", true);
      $("#vegetarian").prop("disabled", true);
 	 $("#vegan").prop("disabled", true);
-     $("#milkprotein").prop("disabled", true);
-
-   	 	
+     $("#milkprotein").prop("disabled", true);   	 	
    });	
 });
 
