@@ -5,10 +5,23 @@
 	var  goal = sessionStorage.getItem("goal");
 	var  age = sessionStorage.getItem("age");
 	
-    /* lägg till värden för preferenser också */ 
-
-	var editMode = false;
+    /*preferenser*/   
+    var  vegan = sessionStorage.getItem("vegan");
+    var  vegetarian = sessionStorage.getItem("vegetarian");
+	var  gluten = sessionStorage.getItem("gluten");
+	var  nut = sessionStorage.getItem("nut");
+	var  laktos = sessionStorage.getItem("laktos");
+	var  milkprotein = sessionStorage.getItem("milkprotein");
 	
+	var editMode = false;
+	var editIcon = $("<i>");
+	editIcon.text("edit");
+	editIcon.addClass("material-icons right");
+	
+	var cancelIcon = $("<i>");
+	cancelIcon.text("not_interested");
+	cancelIcon.addClass("material-icons right");
+
 function getInfo() {
 	$("#activity").val(activity);
 	$("#sex").val(sex);
@@ -20,39 +33,58 @@ function getInfo() {
 	$("#sex").material_select();
 	$("#activity").material_select();
 	$("#goal").material_select();
+	
+	if(gluten == "true"){
+		$("#gluten").prop("checked", true);
+	} else {
+		$("#gluten").prop("checked", false);
+	}
+	
+	if(laktos == "true"){
+		$("#laktos").prop("checked", true);
+	}else {
+		$("#laktos").prop("checked", false);
+	}
+	
+	if(nut == "true"){
+		$("#nut").prop("checked", true);
+	}else {
+		$("#glunutten").prop("checked", false);
+	}
+	
+	if(vegetarian == "true"){
+		$("#vegetarian").prop("checked", true);
+	}else {
+		$("#vegetarian").prop("checked", false);
+	}
+	
+	if(vegan == "true"){
+		$("#vegan").prop("checked", true);
+	}else {
+		$("#vegan").prop("checked", false);
+	}
+	
+	if(milkprotein == "true"){
+		$("#milkprotein").prop("checked", true);
+	}else {
+		$("#milkprotein").prop("checked", false);
+	}
 };
-
-// Förmodligen tas bort
-/*var activityLevels = [];
-	activityLevels["1.2"] = "Lite eller ingen motion alls/kontorsarbete.";
-	activityLevels["1.3"] = "Lätt motion 1-3 gånger i veckan.";
-	activityLevels["1.5"] = "Medel motion 3-5 gånger i veckan/fysiskt arbete.";
-	activityLevels["1.7"] = "Tung motion 6-7gånger i veckan.";
-	activityLevels["1.9"] = "Mycket tung motion 6-7 gånger i veckan.";
-	activityLevels["2.0"] = "Elitidrottare under högsäsong.";
-	
-var goals = [];
-	goals["muskler"] =  "Att bygga muskler.";
-	goals["vikt"] =  "Att gå ner i vikt.";
-	goals["hälsosamt"] =  "Att äta hälsosamt.";
-	
-var sexArray = [];
-	sexArray["Female"] = "Kvinna";
-	sexArray["Male"] = "Man";*/
 
 function editInformation(){
 
-	if(editMode) {
-		 enableForm();
-		 editMode = false;
-	}else{
-		restoreInformation();
-		editMode = true;
+	if(!editMode) {
+			enableForm();
+        	editMode = true;
+	}else{	
+         restoreInformation();
+         editMode = false;
 	}
 }
 
 function enableForm() {
 	$("#edit").text("Avbryt");
+	$("#edit").append(cancelIcon);
 	
 	$("#activity").prop("disabled", false);
 	$("#sex").prop("disabled", false);
@@ -76,6 +108,7 @@ function enableForm() {
 
 function restoreInformation(){
 	$("#edit").text("Ändra information");
+	$("#edit").append(editIcon);
 	
 	$("#activity").prop("disabled", true);
 	$("#sex").prop("disabled", true);
@@ -107,6 +140,14 @@ function saveChanges(){
 	var  goal = $("#goal").val();
 	var  age = $("#age").val();
 	
+	/* PREFERENSER: */ 
+	var  gluten = $("#gluten").val();
+	var  laktos = $("#laktos").val();
+	var  nut = $("#nut").val();
+	var  vegetarian = $("#vegetarian").val();
+	var  vegan = $("#vegan").val();
+	var  milkprotein = $("#milkprotein").val();	 
+	
 	sessionStorage.setItem("activity", activity);
 	sessionStorage.setItem("sex", sex);
 	sessionStorage.setItem("weight", weight);
@@ -114,38 +155,44 @@ function saveChanges(){
 	sessionStorage.setItem("goal", goal);
 	sessionStorage.setItem("age", age);
 	
+	
+	checkPref();
+	
 	$("#activity").prop("disabled", true);
 	$("#sex").prop("disabled", true);
 	$("#weight").prop("disabled", true);
 	$("#height").prop("disabled", true);
 	$("#goal").prop("disabled", true);
 	$("#age").prop("disabled", true);
-    
-    /* PREFERENSER: */ 
+      
+	$("#sex").material_select();
+	$("#activity").material_select();
+	$("#goal").material_select();
+		    
 	$("#gluten").prop("disabled", true);
 	$("#laktos").prop("disabled", true);
     $("#nut").prop("disabled", true);
     $("#vegetarian").prop("disabled", true);
 	$("#vegan").prop("disabled", true);
-    $("#milkprotein").prop("disabled", true);
+    $("#milkprotein").prop("disabled", true);	
     
-
-    
-	$("#sex").material_select();
-	$("#activity").material_select();
-	$("#goal").material_select();
-		
+    $("#edit").text("Ändra information");
+    $("#edit").append(editIcon);  
 }
 	
 $(document).ready(function () {
+   $('select').material_select();
+   $('#prefButtons').load('/template/pref.php', function() {
+   	 getInfo();
+   	 $("#gluten").prop("disabled", true);
+	 $("#laktos").prop("disabled", true);
+     $("#nut").prop("disabled", true);
+     $("#vegetarian").prop("disabled", true);
+	 $("#vegan").prop("disabled", true);
+     $("#milkprotein").prop("disabled", true);
 
-    
-    /* TILLAGT AV KARRO */ 
-     $('#prefButtons').load('/template/pref.php');
-    	
-    $('select').material_select();
-    getInfo();
-	
+   	 	
+   });	
 });
 
 
