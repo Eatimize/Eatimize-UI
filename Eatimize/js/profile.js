@@ -11,10 +11,17 @@
 	var  gluten = sessionStorage.getItem("gluten");
 	var  nut = sessionStorage.getItem("nut");
 	var  laktos = sessionStorage.getItem("laktos");
-	var  milkprotein = sessionStorage.getItem("mjolkprot");
-
-	var editMode = false;
+	var  milkprotein = sessionStorage.getItem("milkprotein");
 	
+	var editMode = false;
+	var editIcon = $("<i>");
+	editIcon.text("edit");
+	editIcon.addClass("material-icons right");
+	
+	var cancelIcon = $("<i>");
+	cancelIcon.text("not_interested");
+	cancelIcon.addClass("material-icons right");
+
 function getInfo() {
 	$("#activity").val(activity);
 	$("#sex").val(sex);
@@ -27,46 +34,57 @@ function getInfo() {
 	$("#activity").material_select();
 	$("#goal").material_select();
 	
-	$("#gluten").val(gluten);
-	$("#laktos").val(laktos);
-	$("#nut").val(nut);
-	$("#vegetarian").val(vegetarian);
-	$("#vegan").val(vegan);
-	$("#milkprotein").val(milkprotein);	 
+	if(gluten == "true"){
+		$("#gluten").prop("checked", true);
+	} else {
+		$("#gluten").prop("checked", false);
+	}
+	
+	if(laktos == "true"){
+		$("#laktos").prop("checked", true);
+	}else {
+		$("#laktos").prop("checked", false);
+	}
+	
+	if(nut == "true"){
+		$("#nut").prop("checked", true);
+	}else {
+		$("#glunutten").prop("checked", false);
+	}
+	
+	if(vegetarian == "true"){
+		$("#vegetarian").prop("checked", true);
+	}else {
+		$("#vegetarian").prop("checked", false);
+	}
+	
+	if(vegan == "true"){
+		$("#vegan").prop("checked", true);
+	}else {
+		$("#vegan").prop("checked", false);
+	}
+	
+	if(milkprotein == "true"){
+		$("#milkprotein").prop("checked", true);
+	}else {
+		$("#milkprotein").prop("checked", false);
+	}
 };
-
-// Förmodligen tas bort
-/*var activityLevels = [];
-	activityLevels["1.2"] = "Lite eller ingen motion alls/kontorsarbete.";
-	activityLevels["1.3"] = "Lätt motion 1-3 gånger i veckan.";
-	activityLevels["1.5"] = "Medel motion 3-5 gånger i veckan/fysiskt arbete.";
-	activityLevels["1.7"] = "Tung motion 6-7gånger i veckan.";
-	activityLevels["1.9"] = "Mycket tung motion 6-7 gånger i veckan.";
-	activityLevels["2.0"] = "Elitidrottare under högsäsong.";
-	
-var goals = [];
-	goals["muskler"] =  "Att bygga muskler.";
-	goals["vikt"] =  "Att gå ner i vikt.";
-	goals["hälsosamt"] =  "Att äta hälsosamt.";
-	
-var sexArray = [];
-	sexArray["Female"] = "Kvinna";
-	sexArray["Male"] = "Man";*/
 
 function editInformation(){
 
-	if(editMode) {
+	if(!editMode) {
 			enableForm();
-        	editMode = false;
-
+        	editMode = true;
 	}else{	
          restoreInformation();
-         editMode = true;
+         editMode = false;
 	}
 }
 
 function enableForm() {
 	$("#edit").text("Avbryt");
+	$("#edit").append(cancelIcon);
 	
 	$("#activity").prop("disabled", false);
 	$("#sex").prop("disabled", false);
@@ -90,6 +108,7 @@ function enableForm() {
 
 function restoreInformation(){
 	$("#edit").text("Ändra information");
+	$("#edit").append(editIcon);
 	
 	$("#activity").prop("disabled", true);
 	$("#sex").prop("disabled", true);
@@ -136,12 +155,8 @@ function saveChanges(){
 	sessionStorage.setItem("goal", goal);
 	sessionStorage.setItem("age", age);
 	
-	sessionStorage.setItem("gluten", gluten);
-    sessionStorage.setItem("laktos", laktos);
-    sessionStorage.setItem("nut", nut);
-    sessionStorage.setItem("vegetarian", vegetarian);
-    sessionStorage.setItem("vegan", vegan);
-    sessionStorage.setItem("milkprotein", milkprotein); 
+	
+	checkPref();
 	
 	$("#activity").prop("disabled", true);
 	$("#sex").prop("disabled", true);
@@ -161,15 +176,23 @@ function saveChanges(){
 	$("#vegan").prop("disabled", true);
     $("#milkprotein").prop("disabled", true);	
     
+    $("#edit").text("Ändra information");
+    $("#edit").append(editIcon);  
 }
 	
 $(document).ready(function () {
    $('select').material_select();
-    getInfo();
-    
-        /* TILLAGT AV KARRO */ 
-     $('#prefButtons').load('/template/pref.php');
-	
+   $('#prefButtons').load('/template/pref.php', function() {
+   	 getInfo();
+   	 $("#gluten").prop("disabled", true);
+	 $("#laktos").prop("disabled", true);
+     $("#nut").prop("disabled", true);
+     $("#vegetarian").prop("disabled", true);
+	 $("#vegan").prop("disabled", true);
+     $("#milkprotein").prop("disabled", true);
+
+   	 	
+   });	
 });
 
 

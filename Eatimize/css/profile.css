@@ -1,0 +1,20 @@
+@media only screen and (max-device-width: 480px) {
+   .editInformationButton, .saveInformationButton{
+      width: 100%;
+      margin-bottom: 15px;
+   }
+   
+   .card-panel, .aboutYouHeader{
+  	text-align: center;
+   }
+   
+   .profileName{
+  	font-size: 2rem;
+   }
+   
+   .aboutYou{
+   	font-size: 1.5rem;
+   }
+  
+}
+

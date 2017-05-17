@@ -12,40 +12,40 @@ function storageMealtypemaltid(){
 }
 
 //Goal
-function activtym() {
+function activitym() {
 sessionStorage.setItem("goal", "muskler");
    document.location.href = "#R3";
 }
-function activtyv() {
+function activityv() {
 sessionStorage.setItem("goal", "vikt");
    document.location.href = "#R3";
 }
-function activtyh() {
+function activityh() {
 sessionStorage.setItem("goal", "hälsosamt");
    document.location.href = "#R3";
 }
 //Activty
-function activty1() {
+function activity1() {
 sessionStorage.setItem("actvity", "1.2");
   document.location.href = "#R2";
 }
-function activty2() {
+function activity2() {
 sessionStorage.setItem("actvity", "1.3");
   document.location.href = "#R2";
 }
-function activty3() {
+function activity3() {
 sessionStorage.setItem("actvity", "1.5");
   document.location.href = "#R2";
 }
-function activty4() {
+function activity4() {
 sessionStorage.setItem("actvity", "1.7");
   document.location.href = "#R2";
 }
-function activty5() {
+function activity5() {
 sessionStorage.setItem("actvity", "1.9");
   document.location.href = "#R2";
 }
-function activty6() {
+function activity6() {
 sessionStorage.setItem("actvity", "2.0");
   document.location.href = "#R2";
 }
@@ -72,6 +72,8 @@ function sumInfo() {
    sessionStorage.setItem("age", age);
    sessionStorage.setItem("height", height);
    sessionStorage.setItem("weight",weight);
+   
+   checkPref();
 }
 
 
@@ -94,30 +96,36 @@ function modal(){
   );
 }
 function checkPref() {
-      var pref;
-    if(document.getElementById('indeterminate-Veg').checked) {
-      sessionStorage.setItem("vegan", "vegan");
-       restriction += ","+sessionStorage.getItem("vegan");
+    if(document.getElementById('vegan').checked) {
+  	 sessionStorage.setItem("vegan", "true");
+    } else{
+    	 sessionStorage.setItem("vegan", "false");
     }
-    if(document.getElementById('indeterminate-glutten').checked) {
-      sessionStorage.setItem("glutten", "gluttenfri");
-       restriction += ","+sessionStorage.getItem("glutten");
+    if(document.getElementById('vegetarian').checked) {
+      sessionStorage.setItem("vegetarian", "true");
+    } else{
+    	 sessionStorage.setItem("vegetarian", "false");
     }
-    if(document.getElementById('indeterminate-inganott').checked) {
-      sessionStorage.setItem("notter", "notterfri");
-       restriction += ","+sessionStorage.getItem("notter");
+    if(document.getElementById('gluten').checked) {
+      sessionStorage.setItem("gluten", "true");
+    } else{
+    	 sessionStorage.setItem("gluten", "false");
     }
-    if(document.getElementById('indeterminate-lakto').checked) {
-      sessionStorage.setItem("lakto", "laktosfri");
-       restriction += ","+sessionStorage.getItem("lakto");
+    if(document.getElementById('nut').checked) {
+      sessionStorage.setItem("nut", "true");
+    } else{
+    	 sessionStorage.setItem("nut", "false");
     }
-    if(document.getElementById('indeterminate-mjolkprot').checked) {
-      sessionStorage.setItem("mjolkprot", "mjolkproteinfri");
-       restriction += ","+sessionStorage.getItem("mjolkprot");
+    if(document.getElementById('laktos').checked) {
+      sessionStorage.setItem("laktos", "true");
+    } else{
+    	 sessionStorage.setItem("laktos", "false");
     }
-console.log(restriction);
-
-
+    if(document.getElementById('milkprotein').checked) {
+      sessionStorage.setItem("milkprotein", "true");
+    } else{
+    	 sessionStorage.setItem("milkprotein", "false");
+    }
 }
 
 

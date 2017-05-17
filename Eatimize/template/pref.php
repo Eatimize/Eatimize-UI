@@ -1,57 +1,17 @@
 <html>
     <head>
-        <link href="css/pref.css" rel="stylesheet" type="text/css">    
-  <script>   
-      
-          $(document).ready(function(){
-              
-              /*
-              
-              HÄMTA FRÅN SESSIONSTORAGE : 
-              */
-              
-            $('#gluten').prop('checked', sessionStorage.getItem("gluten"));  
-
-              
-            $('#laktos').prop('checked', sessionStorage.getItem("laktos"));  
-
-              
-            $('#milkprotein').prop('checked', sessionStorage.getItem("milkprotein"));  
-
-              
-            $('#vegetarian').prop('checked', sessionStorage.getItem("vegetarian"));  
-
-              
-            $('#vegan').prop('checked', sessionStorage.getItem("vegan"));  
-              
-            $('#nut').prop('checked', sessionStorage.getItem("nut"));  
-
-              
-              /* SLUT PÅ SESSONSTORAGE */
-              
-              
-            $('.cb').click(function() {
-                
-            /*    console.log($(this).attr("value") + ", " + $(this).is(":checked"));  
-            */                      sessionStorage.setItem($(this).attr("value"), $(this).is(":checked"));
-                                    
-            });
-        
-        });
-    </script>
-    
+        <link href="css/pref.css" rel="stylesheet" type="text/css">        
     </head>
 
     <body>
         <div class="prefDiv">
             <input type='checkbox' name='pref' value='gluten' id="gluten" class="cb"/>
             <label for="gluten">
-                <img src="icons/gluten.png" class="prefimg">
+                <img src="icons/gluten.png" id="glutenimg" class="prefimg">
                 <span>Glutenallergi</span>
             </label>    
 
         </div>  
-
 
         <div class="prefDiv">
             <input type='checkbox' name='pref' value='milkprotein' id="milkprotein" class="cb"/>    
