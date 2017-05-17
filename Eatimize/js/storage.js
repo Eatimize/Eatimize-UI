@@ -5,10 +5,10 @@ function storageMealtypefrukost(){
   sessionStorage.setItem("mealtype", "1");
 }
 function storageMealtypemellanmal(){
-  sessionStorage.setItem("mealtype", "3");
+  sessionStorage.setItem("mealtype", "2");
 }
 function storageMealtypemaltid(){
-  sessionStorage.setItem("mealtype", "2");
+  sessionStorage.setItem("mealtype", "3");
 }
 
 //Goal

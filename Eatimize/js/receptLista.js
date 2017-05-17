@@ -42,7 +42,7 @@ $(document).ready(function(){
     function printRes(res){
                 response = res;
                 array=response;
-                $( ".card" ).remove();
+
 
                     $.each(response, function(index, item){
                     $.get("template/keycard.php", function(data){
@@ -75,7 +75,7 @@ $(document).ready(function(){
 
                  $('#searchField').keyup(function(e){
                    if(e.keyCode == 13){
-                     $( ".card" ).remove();
+                     $( ".recept" ).remove();
                      var array = JSON.parse(sessionStorage.getItem("array"));
                      var  substring =  sessionStorage.getItem("searchField");
                      var temp= new Array();
