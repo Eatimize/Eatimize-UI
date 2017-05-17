@@ -82,6 +82,9 @@ $(document).ready(function(){
                      var counter=0;
 
                      $.each(array, function(index, item){
+                       var x = array[index].recipeName.toLowerCase();
+                        console.log(x);
+                          if (x.indexOf(substring) != -1) {
                             temp[index] = array[index];
                             counter++;
                             }
