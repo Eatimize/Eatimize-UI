@@ -26,27 +26,27 @@ sessionStorage.setItem("goal", "hälsosamt");
 }
 //Activty
 function activity1() {
-sessionStorage.setItem("actvity", "1.2");
+sessionStorage.setItem("activity", "1.2");
   document.location.href = "#R2";
 }
 function activity2() {
-sessionStorage.setItem("actvity", "1.3");
+sessionStorage.setItem("activity", "1.3");
   document.location.href = "#R2";
 }
 function activity3() {
-sessionStorage.setItem("actvity", "1.5");
+sessionStorage.setItem("activity", "1.5");
   document.location.href = "#R2";
 }
 function activity4() {
-sessionStorage.setItem("actvity", "1.7");
+sessionStorage.setItem("activity", "1.7");
   document.location.href = "#R2";
 }
 function activity5() {
-sessionStorage.setItem("actvity", "1.9");
+sessionStorage.setItem("activity", "1.9");
   document.location.href = "#R2";
 }
 function activity6() {
-sessionStorage.setItem("actvity", "2.0");
+sessionStorage.setItem("activity", "2.0");
   document.location.href = "#R2";
 }
 /**
@@ -127,7 +127,6 @@ function checkPref() {
     	 sessionStorage.setItem("milkprotein", "false");
     }
 }
-
 
 /**
   Starts when the pages is ready.

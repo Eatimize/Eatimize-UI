@@ -1,163 +1,191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>EATIMIZE</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>EATIMIZE</title>
 
-         <!-- CSS  -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-		<link href="css/profile.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style-intro.css" type="text/css" rel="stylesheet" media="screen,projection"/> 
 
-   <!-- Kod för att flytta "Eatimize" i nav en bit åt höger -->
-        <style>
-            .row {
-                padding: 10px;
-            }
+    <style>
+        .parallax-container {
+          height: 150px;
+        }
+        
+    </style>
+    
+</head>
+<body>
 
-            .brand-logo {
-                margin-left: 20px;
-            }
 
-            body{
-                 background-image:none
-            }
-        </style>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
 
-    </head>
+  <div id="index-banner" class="parallax-container">
+      <div class="parallax">   
+<img src="images/background11.jpg" alt="Unsplashed background img 1"></div>
+      </div>
 
-    <body>
-         <!-- Navigation -->
-        <div id="navbar"></div>
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row">
+        <div class="col s12 center">
+        <h3 id="R1" class="header center green-text">Vad är ditt mål?</h3>
+        <div class="row center">
+          <h5 class="header col s12 light"></h5>
+            <div class="containerGoal">
+        <p id="muscle">
+      <input onclick="activitym();" class="with-gap" name="group1" type="radio" id="test1" />
+      <label id="R1u1" for="test1">Bygga muskler</label>
+    </p>
+    <p>
+      <input onclick="activityv();" class="with-gap" name="group1" type="radio" id="test2" />
+      <label id="R1u2" for="test2">Gå ner i vikt</label>
+    </p>
+    <p>
+      <input onclick="activityh();" class="with-gap" name="group1" type="radio" id="test3"  />
+      <label id="R1u3" for="test3">Äta hälsosamt </label>
+    </p>
+    </div>
+        </div>
 
-        <!-- Övre bakgrundsbilden -->
-    <div id="index-banner" class="parallax-container">
-        <div class="parallax"><img src="images/halftopstone.jpg" alt="Unsplashed background img 1"></div>
+            </div>
+          </div>
+      </div>
+
     </div>
 
-<div class="row">
+  <div class="parallax-container valign-wrapper">
+    <div class="parallax"><img src="images/background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+    <div class="container">
+    <div class="section">
+      <div class="row ">
+          <div class="col s12  ">
+           <H3 id="R3" class="header center green-text"> Hur ofta motionerar du?</H3>
+         </div>
+        <div id="question2" class="col s12 m4 push-s4 pull-s4 ">
 
-            <!-- Kortet -->
-        <div class="container" class="col s12 m4">
-            <div class="card">
-                    <div class="col s12">
-						<div class="card-panel green z-depth-1">
-							<div class="row">
-								<div class="col s12 m5">
-								<img src="images/background2.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-								</div>
-								<div class="col s12 m4">
-								<span class="white-text">
-									<h3 class="profileName">Min profil</h3>
-								</span>
-								</div>
-							</div>
-						</div>
-					</div>		
-					
-					<div class="container-card-content">		
-						<div class="row">
-							<div class="col s12 aboutYouHeader">
-							<h4 class="aboutYou"> Information om dig </h4>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col s12 m4">
-								<div class="row"> 	
-									<div class="input-field">											
-										<select id="goal" disabled>
-										<option value="default" disabled selected>Välj</option>
-									      <option value="muskler">Att bygga muskler</option>
-									      <option value="vikt">Att gå ner i vikt</option>
-									      <option value="hälsosamt">Att äta hälsosamt</option>
-									    </select>
-								    	<label for="goal" data-error="wrong" data-success="right">Ditt mål är:</label>
-									</div>
-									<div class="input-field">	
-										<input disabled value="" id="age" type="text" class="validate">
-										<label for="disabled" data-error="wrong" data-success="right">Ålder i år:</label>
-									</div>
-									<div class="input-field">
-										
-										<select id="sex" disabled>
-										<option value="default" disabled selected>Välj</option>
-									      <option value="Female">Kvinna</option>
-									      <option value="Male">Man</option>
-									    </select>	
-										<label for="sex" data-error="wrong" data-success="right">Kön:</label>
-									</div>
-									<div class="input-field">	
-										<label for="weight" data-error="wrong" data-success="right">Din vikt i kg:</label>									
-										<input disabled value="" id="weight" type="text" class="validate">													
-									</div>
-									<div class="input-field">
-										<label for="height" data-error="wrong" data-success="right">Din längd i cm</label>																
-										<input disabled value="" id="height" type="text" class="validate">
-									</div>
-									<div class="input-field">	
-										<select id="activity" disabled>
-										<option value="default" disabled selected>Välj</option>
-									      <option value="1.2">Lite eller ingen motion alls/kontorsarbete</option>
-									      <option value="1.3">Lätt motion 1-3 gånger i veckan</option>
-									      <option value="1.5">Medel motion 3-5 gånger i veckan/fysiskt arbete</option>
-									      <option value="1.7">Tung motion 6-7gånger i veckan</option>
-									      <option value="1.9">Mycket tung motion 6-7 gånger i veckan</option>
-									      <option value="2.0">Elitidrottare under högsäsong</option>
-									    </select>	
-										<label for="activity" data-error="wrong" data-success="right">Din motionsnivå:</label>
-									</div>	
-								</div>		
-						</div>
-				
-					
+    <div class="containerGoal">
+    <p>
+      <input onclick="activity1();"  class="with-gap" name="group2" type="radio" id="indeterminate-1.2" />
+      <label id="label1.2" for="indeterminate-1.2"> Lite eller ingen motion alls/kontorsarbete </label>
+    </p>
+    <p>
+      <input onclick="activity2();" class="with-gap" name="group2" type="radio" id="indeterminate- 1,3" />
+      <label id="label1.3" for="indeterminate- 1,3">Lätt motion 1-3 gånger i veckan </label>
+    </p>
+    <p>
+      <input onclick="activity3();" class="with-gap" name="group2" type="radio" id="indeterminate-1,5" />
+      <label id="label1.5" for="indeterminate-1,5">Medel motion 3-5 gånger i veckan/fysiskt jobb </label>
+    </p>
+    <p>
+      <input onclick="activity4();" class="with-gap" name="group2"type="radio" id="indeterminate- 1,7" />
+      <label id="label1.7" for="indeterminate- 1,7">Tung motion 6-7 gånger i veckan </label>
+    </p>
+    <p>
+      <input  onclick="activity5();" class="with-gap" name="group2" type="radio" id="indeterminate-1,9" />
+      <label id="label1.9" for="indeterminate-1,9">Mycket tung motion 1-2 gånger per dag  </label>
+    </p>
+    <p>
+      <input onclick="activity6();" class="with-gap" name="group2" type="radio" id="indeterminate-2,0" />
+      <label id="label2.0" for="indeterminate-2,0">Elitidrottare under högsäsong </label>
+    </p>
+      </div>
 
-				
-					<div class="col s12 m4">
-                        
-                        <!-- TILLAGT AV KARRO -->
-                        <label>Preferenser:</label>
-                        <div id="prefButtons"></div>
-                        
-						</div>
-					</div>
-					
-				<div class="row">
-					<div class="col s12 m4">
-						<button onclick="editInformation();" class="btn waves-effect green editInformationButton " id="edit" type="editable" name="action">Ändra information
-							<i class="material-icons right">edit</i>
-						</button>	
-					</div>
-					<div class="col s12 m4">
-						<button onclick="saveChanges();" class="btn waves-effect green saveInformationButton" type="submit" name="action">Spara ändringar
-							<i class="material-icons right">send</i>
-						</button>	
-					</div>		
-				</div>						
-				</div>
-				
-	
-					
-				</div>	
-	         </div>
-	        </div>
+            </div>
+          
+        
+        </div>
+    </div>
+  </div>
 
-	
-	 
-	 
-        <!-- Nedre bakgrundsbilden -->
+<div class="parallax-container valign-wrapper">
+      <div class="parallax"><img src="images/background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+    
 
-          <div id="index-banner" class="parallax-container">
-              <div class="parallax"><img src="images/halfbottomstone.jpg" alt="Unsplashed background img 1"></div>
-          </div>
-        <!-- Scripts -->
+  <div class="container">
+    <div class="section">
 
-          <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-          <script src="js/materialize.js"></script>
-          <script src="js/init.js"></script>
-          <script src="js/utils.js"></script>
-		  <script src="js/storage.js"></script>
-		  <script src="js/profile.js"></script>
-    </body>
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h3 id="R2" class="header center green-text">Om dig</h3>
+        
+            
+    <h5 id="R2about">Hur gammal är du ?</h5>
+    <div class="aboutRow">
+    <div class="input-field">
+      <input  value="" id="age" type="text" class="validate" placeholder="(28år)">
+      <label class="active" for="age">Ålder</label>
+    </div>
+  </div>
+    <h5 id="R2about">Hur lång är du ? </h5>
+    <div class="aboutRow">
+    <div class="input-field">
+      <input value="" id="tall" type="text" class="validate" placeholder="(185cm)">
+      <label class="active" for="tall">Längd</label>
+    </div>
+  </div>
+    <h5 id="R2about">Hur mycket väger du ? </h5>
+    <div class="aboutRow">
+    <div class="input-field">
+      <input value="" id="weight" type="text" class="validate" placeholder="(75kg)">
+      <label class="active" for="weigh">Vikt</label>
+    </div>
+        
+  </div>
+    <h5 id="R2about">Vad är ditt kön ?</h5>
+            
+            <!-- TILLAGD AV KARRO -->
+    <div id="sexButtons"></div>    
+    </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+      <div class="parallax"><img src="images/background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+    
+        
+    <!-- DEN HÄR CONTAINERN VAR TOM FÖRUT -->
+<div class="container">
+    <div class="section">
+                
+             <!-- LAGT TILL PREFERENSER, MEN 
+                 MÅSTE SNYGGAS TILL: -->
+        
+        <!-- OBS OBS: SESSIONSTORAGE FUNGERAR EJ -->
+           <div class="row">
+               <div class="col s12 center">
+                   <H3 class="header center green-text">Fyll i restriktioner: </H3>      
+               </div>
+               <div id="preferences"></div> 
+        </div>
+    </div>    
+</div>
+     <div class="NextBtn">
+    <a onclick="sumInfo();" class="waves-effect waves-light btn green"  href="mealType.html"> Fortsätt  -></a>
+        </div>
+    
+            <!-- SLUT PÅ PREFERENS-SEKTION -->
+<div id="index-banner" class="parallax-container">
+      <div class="parallax"><img src="images/background11.jpg" alt="Unsplashed background img 1"></div>
+      </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script> 
+  <script src="js/init.js"></script>
+  <script src="js/storage.js"></script>
+    <script src="js/EATIMIZE.js"></script>
+  </body>
 </html>
