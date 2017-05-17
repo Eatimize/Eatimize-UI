@@ -1,13 +1,18 @@
 <html>
     <head>
-        <script src="js/navbar.js"></script>
+
+
         <style>
-         
+
             #searchMob {
-                color: darkgray;       
+                color: darkgray;
             }
-                
+
         </style>
+
+<script src="js/navbar.js"></script>
+<script src="js/receptLista.js"></script>
+
 
 
 </head>
@@ -21,8 +26,6 @@
           <i class="material-icons">menu</i></a>
 
       <ul class="right hide-on-med-and-down">
-
-
         <li id="searchBtn"><a>Sök<i class="material-icons left">search</i></a></li>
         <li><a href="EATIMIZE.html">Info</a></li>
         <li><a href="Profile.html">Min sida</a></li>
