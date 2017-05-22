@@ -20,7 +20,7 @@ function activityv() {
 sessionStorage.setItem("goal",2);
    document.location.href = "#R3";
 }
-function  activityh() {
+function activityh() {
 sessionStorage.setItem("goal", 1);
    document.location.href = "#R3";
 }
@@ -49,6 +49,7 @@ function activity6() {
 sessionStorage.setItem("activity", "2.0");
   document.location.href = "#R2";
 }
+
 /**
   Gender
 */
@@ -61,6 +62,7 @@ sessionStorage.setItem("sex", "Male");
 $('.sex').click(function(){
   $(this). toggleClass('clicked');
 });
+
 /**
   Information about user
 */

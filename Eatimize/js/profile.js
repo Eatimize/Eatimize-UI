@@ -1,4 +1,4 @@
-	var  activity = sessionStorage.getItem("actvity");
+	var  activity = sessionStorage.getItem("activity");
 	var  sex = sessionStorage.getItem("sex");
 	var  weight = sessionStorage.getItem("weight");
 	var  height = sessionStorage.getItem("height");
@@ -33,6 +33,8 @@ function getInfo() {
 	$("#sex").material_select();
 	$("#activity").material_select();
 	$("#goal").material_select();
+	
+	Materialize.updateTextFields(); 
 	
 	if(gluten == "true"){
 		$("#gluten").prop("checked", true);
@@ -183,6 +185,7 @@ function saveChanges(){
 	
 $(document).ready(function () {
    $('select').material_select();
+   
    $('#prefButtons').load('/template/pref.php', function() {
    	 getInfo();
    	 $("#gluten").prop("disabled", true);
@@ -190,7 +193,7 @@ $(document).ready(function () {
      $("#nut").prop("disabled", true);
      $("#vegetarian").prop("disabled", true);
 	 $("#vegan").prop("disabled", true);
-     $("#milkprotein").prop("disabled", true);   	 	
+     $("#milkprotein").prop("disabled", true);  	 	
    });	
 });
 
