@@ -14,7 +14,7 @@
                      sessionStorage.setItem("sex", "Female");
  
                     }
-                 document.location.href = "#R4";
+                 $('html, body').animate({scrollTop:$('#R4').position().top}, 'slow');
         
                  });
             });
