@@ -1,32 +1,34 @@
 <html>
     <head>
         <script>
-            
+
             $(document).ready(function(){
-                
+
              $("#male, #female").change(function () {
                  if ($("#male").is(":checked")) {
 
                      sessionStorage.setItem("sex", "Male");
 
                  }else if ($("#female").is(":checked")) {
- 
+
                      sessionStorage.setItem("sex", "Female");
- 
+
                     }
+
+                         document.location.href = "#R4";
                  });
             });
 
         </script>
 
-        
+
         <style>
-      
-            /*** STÄNG AV MATERIALIZE : ***/ 
-            
+
+            /*** STÄNG AV MATERIALIZE : ***/
+
             .sex-input [type="radio"] + label:before,
             .sex-input [type="radio"] + label:after {
-            content: none; 
+            content: none;
             position: none;
             left: 0;
             top: 0;
@@ -36,17 +38,17 @@
             z-index: 0;
             transition: none;
             }
-            
-            
-            /** LÄGG TILL NY STYLE FÖR RADIOBUTTONS **/ 
-            
+
+
+            /** LÄGG TILL NY STYLE FÖR RADIOBUTTONS **/
+
             .sex { 
                 height: 70px;
-                width: 70px;            
+                width: 70px;
             }
-        
+
             div {
-               /* margin:0 0 0.75em 0;    */        
+               /* margin:0 0 0.75em 0;    */
             }
 
            .sex-input input[type="radio"] {
@@ -75,7 +77,7 @@
             }
 
         </style>
-    
+
     </head>
 
     <body>
@@ -84,9 +86,9 @@
                 <label for="male"><span><img src="icons/male.png" class="sex">Man</span></label>
 
                 <input type="radio" id="female" name="gender" />
-                <label for="female"><span><img src="icons/female.png" class="sex">Kvinna</span></label> 
+                <label for="female"><span><img src="icons/female.png" class="sex">Kvinna</span></label>
         </div>
-    
+
     </body>
-    
-    </html>  
+
+    </html>
