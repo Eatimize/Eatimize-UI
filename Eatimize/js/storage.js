@@ -73,19 +73,23 @@ function sumInfo() {
    sessionStorage.setItem("height", height);
    sessionStorage.setItem("weight",weight);
 
-if (age == ""|| tall == "" || weight == "")  
+
+    if (age == ""|| tall == "" || weight == "")  
 {  
 document.location.href = "#age";  
-return false;  
-}  
-else {
+ 
+}  else if($('input[type=radio]:checked').length != 3)
+    {
+        document.location.href = "#R1";      
+        return false;     
+    }
+else  {
+
      document.location.href = "mealType.html";
 }
-   
+       
+
 }
-
-
-
 
 function modal(){
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
