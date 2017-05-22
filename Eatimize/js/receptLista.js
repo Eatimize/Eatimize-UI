@@ -19,8 +19,23 @@ $(document).ready(function(){
              var  age = sessionStorage.getItem("age");
              var  type = sessionStorage.getItem("mealtype");
 
-             var baseUrl = "http://localhost:8080/api/1/"+activity+"/"+sex+"/"+weight+"/"+height+"/"+goal+"/"+age+"/"+type+"";
+             /* KARRO LÄGGER TILL */
+            var resArray = ['vegan', 'vegetarian', 'gluten', 'laktos', 'milkprotein', 'nut'];
+            var restriction = '';
+
+            for (var i = 0; i <= resArray.length; i++) {
+               if(sessionStorage.getItem(resArray[i]) == 'true'){
+                  restriction += resArray[i]+",";
+                  console.log(restriction);
+               }
+            }
+
+            /* slut på test
+            */
+
+            var baseUrl = "http://localhost:8080/api/1/"+activity+"/"+sex+"/"+weight+"/"+height+"/"+goal+"/"+age+"/"+type+"?restrictions="+restriction+"";
              //var baseUrl= ""http://localhost:8080/api/1/1.2/man/75/175/goal/25/type";
+             console.log(baseUrl);
              $.ajax({
                  type: "GET",
                  url: baseUrl,
@@ -29,7 +44,7 @@ $(document).ready(function(){
                    var array=JSON.stringify(response);
                    sessionStorage.setItem("array", array);
                      printRes(response);
-
+                    console.log(response);
                  }, fail: function (response) {
                      console.log(response);
                  }
