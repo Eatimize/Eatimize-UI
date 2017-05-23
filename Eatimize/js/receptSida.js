@@ -12,11 +12,16 @@ $(document).ready(function(){
     sessionStorage.setItem("scoreFat", scoreFat);
     sessionStorage.setItem("scoreKcal", scoreKcal);
     sessionStorage.setItem("scoreProt", scoreProt);
-    console.log(description+" "+recipeName+" "+scoreCarb+" "+scoreFat+" "+scoreKcal+" "+scoreProt);
+    //console.log(description+" "+recipeName+" "+scoreCarb+" "+scoreFat+" "+scoreKcal+" "+scoreProt);
     $('#title').append(recipeName);
 
+    String.prototype.replaceAll = function(search, replacement){
+        var target = this;
+        return target.replace(new RegExp(search, 'g'), replacement);
+    };
     
-
+    var description = description.replaceAll('\n', '<br/>');
+    
     $('#description').append(description);
 
   $.each(ingredients, function(index){
