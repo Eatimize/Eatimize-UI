@@ -1,0 +1,100 @@
+<html>
+<head>
+        <link href="css/pref.css" rel="stylesheet" type="text/css">      
+    
+    <style>   
+        .prefDiv {
+        
+            text-align: center;
+        }
+        
+        .tooltip {
+            position:relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+
+             top: 60px;
+            left: -7%; 
+            visibility: hidden;
+            background-color: dimgray;
+            color: #fff;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+                
+    </style>
+    
+    </head>
+
+    <body>
+
+        <div class=prefDiv>
+
+            <div class="tooltip">
+            <input type='checkbox' name='pref' value='gluten' id="gluten" class="cb"/>
+            <label for="gluten">
+                <img src="icons/gluten.png" id="glutenimg" class="prefimg">
+            </label>  
+                
+                <span class="tooltiptext">Gluten</span>
+                </div>
+
+        <div class="tooltip">
+            <input type='checkbox' name='pref' value='milkprotein' id="milkprotein" class="cb"/>    
+                <label for="milkprotein">
+                    <img src="icons/milkprotein.png" class="prefimg">
+                   <!-- <span>Mjölkprotein-allergi</span> -->
+                </label>
+             <span class="tooltiptext">Mjölkprotein</span>
+            </div>
+        
+    <div class="tooltip">
+        <input type='checkbox' name='pref' value='laktos' id="laktos" class="cb"/>    
+                <label for="laktos">
+                    <img src="icons/laktos.png" class="prefimg">
+                </label>
+            <span class="tooltiptext">Laktos</span>
+            </div>
+          
+        <div class="tooltip">
+            <input type='checkbox' name='pref' value='nut' id="nut" class="cb"/>    
+                <label for="nut">
+                    <img src="icons/nut.png" class="prefimg">
+                </label> 
+            <span class="tooltiptext">Jordnöt</span>
+            </div>
+   
+        <div class="tooltip">
+            <input type='checkbox' name='pref' value='vegetarian' id="vegetarian" class="cb"/>    
+                <label for="vegetarian">
+                    <img src="icons/vegetarian.png"  class="prefimg">
+                </label>    
+            <span class="tooltiptext">Vegetarian</span>
+            </div>
+       
+        <div class="tooltip">
+            <input type='checkbox' name='pref' value='vegan' id="vegan" class="cb"/>    
+                <label for="vegan">
+                    <img src="icons/vegan.png" class="prefimg">
+                </label>
+               <span class="tooltiptext">Vegan</span>
+            </div>
+            
+            <button class="btn waves-effect green waves-light" type="submit" name="action">uppdatera sökning
+    <i class="material-icons right">send</i>
+  </button>
+            
+        </div>
+    
+    </body>
+
+</html>
