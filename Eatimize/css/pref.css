@@ -51,6 +51,8 @@
         input[type=checkbox] + label {       
             height: 40px;       
             filter: grayscale();
+            -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+
             display:inline-block;   
             padding: 15px;
             
