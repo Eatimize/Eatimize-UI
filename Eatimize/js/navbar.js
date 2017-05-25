@@ -2,19 +2,26 @@
  $(document).ready(function(){
    var href = document.location.href;
    var lastPathSegment = href.substr(href.lastIndexOf('/') + 1);
+
+   //Removes certain elements on pages where is should not be.
   if(lastPathSegment!="receptLista.html" || lastPathSegment!="receptSida.html"){
-    console.log("HEJ");
        $("#searchBtn").empty();
   }
   if(lastPathSegment=="receptLista.html" || lastPathSegment=="receptSida.html"){
-    console.log("HEJdå");
        $("#searchBtn").append(
   '<a>Sök<i class="material-icons left">search</i></a>'
          );
   }
+  if(lastPathSegment=="EATIMIZE.html"){
+         $("#feedback").empty();
+            $("#profil").empty();
+               $("#mealtype").attr('href','#');
+
+  }
+
+
+  //Search button feautres. Responds on enter/keycode 13
      $(".button-collapse").sideNav();
-
-
      $("#searchBtn").on('click', function() {
         console.log("searchBtn nav")
              $('#searchBtn').replaceWith(
