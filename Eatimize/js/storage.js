@@ -75,16 +75,17 @@ function sumInfo() {
    sessionStorage.setItem("height", height);
    sessionStorage.setItem("weight",weight);
 
-<<<<<<< HEAD
+
    if (age == ""|| tall == "" || weight == "") {
    $('html, body').animate({scrollTop:$('#R2').position().top}, 'slow');
     }else if($('input[type=radio]:checked').length != 3){
     $('html, body').animate({scrollTop:$('#R1').position().top}, 'slow');
    }else {
+     checkPref();
     document.location.href = "mealType.html";
 }
-checkPref();
-=======
+
+
 
 
       if (age == ""|| tall == "" || weight == "")
@@ -99,7 +100,7 @@ checkPref();
         checkPref();
        document.location.href = "mealType.html";
    }
->>>>>>> refs/remotes/origin/feature-upd
+
 
 
 }
