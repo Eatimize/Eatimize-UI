@@ -64,9 +64,10 @@ $('.sex').click(function(){
 });
 
 /**
-  Information about user
+  Information about user. ALso last stage of the information site. Send the user to the next page and checks if the information is correct.
 */
 function sumInfo() {
+  //stoares the information
   var age = $( "#age" ).val();
   var height = $( "#tall" ).val();
   var weight = $( "#weight" ).val();
@@ -75,7 +76,7 @@ function sumInfo() {
    sessionStorage.setItem("height", height);
    sessionStorage.setItem("weight",weight);
 
-
+//Checks the information
    if (age == ""|| tall == "" || weight == "") {
    $('html, body').animate({scrollTop:$('#R2').position().top}, 'slow');
     }else if($('input[type=radio]:checked').length != 3){
@@ -107,6 +108,7 @@ function modal(){
     }
   );
 }
+//Checks preferences
 function checkPref() {
     if(document.getElementById('vegan').checked) {
   	 sessionStorage.setItem("vegan", "true");
