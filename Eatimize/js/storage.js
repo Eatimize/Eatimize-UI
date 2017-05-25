@@ -77,10 +77,9 @@ function sumInfo() {
    checkPref();
 
    if (age == ""|| tall == "" || weight == "") {
-      document.location.href = "#age";  
+      document.location.href = "#age";
     }else if($('input[type=radio]:checked').length != 3){
        document.location.href = "#R1";
-       return false;
    }else {
     document.location.href = "mealType.html";
 }
