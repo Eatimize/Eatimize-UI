@@ -86,23 +86,6 @@ function sumInfo() {
 }
 
 
-
-
-      if (age == ""|| tall == "" || weight == "")
-   {
-      $('html, body').animate({scrollTop:$('#R2').position().top}, 'slow');
-
-   }  else if($('input[type=radio]:checked').length != 3)
-      {
-          $('html, body').animate({scrollTop:$('#R1').position().top}, 'slow');
-      }
-   else  {
-        checkPref();
-       document.location.href = "mealType.html";
-   }
-
-
-
 }
 
 
