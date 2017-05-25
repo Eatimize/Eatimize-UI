@@ -74,8 +74,18 @@ function sumInfo() {
    sessionStorage.setItem("age", age);
    sessionStorage.setItem("height", height);
    sessionStorage.setItem("weight",weight);
-
    checkPref();
+
+   if (age == ""|| tall == "" || weight == "") {
+      document.location.href = "#age";  
+    }else if($('input[type=radio]:checked').length != 3){
+       document.location.href = "#R1";
+       return false;
+   }else {
+    document.location.href = "mealType.html";
+}
+
+
 }
 
 
