@@ -29,7 +29,6 @@
         <li id="searchBtn"><a>Sök<i class="material-icons left">search</i></a></li>
         <li><a href="EATIMIZE.html">Info</a></li>
         <li><a href="Profile.html">Min sida</a></li>
-        <li><a href="login&register.html">Logga in</a></li>
           <li><a href="contact-form.php">Feedback</a></li>
       </ul>
          <ul class="side-nav" id="mobile-demo">
@@ -43,7 +42,6 @@
                  </div></li>
         <li><a href="EATIMIZE.html">Info</a></li>
         <li><a href="Profile.html">Min sida</a></li>
-        <li><a href="login&register.html">Logga ut</a></li>
         <li><a href="contact-form.php">Feedback</a></li>
       </ul>
     </div>
