@@ -15,8 +15,7 @@
 
                     }
 
-                    checkPref();
-
+                          $('html, body').animate({scrollTop:$('#R4').position().top}, 'slow');
                  });
             });
 
