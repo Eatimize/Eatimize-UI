@@ -15,7 +15,8 @@
 
                     }
 
-                         document.location.href = "#R4";
+                    checkPref();
+
                  });
             });
 

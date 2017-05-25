@@ -14,40 +14,40 @@ function storageMealtypemaltid(){
 //Goal
 function activitym() {
 sessionStorage.setItem("goal", 3);
-   document.location.href = "#R3";
+   $('html, body').animate({scrollTop:$('#R3').position().top}, 'slow');
 }
 function activityv() {
 sessionStorage.setItem("goal",2);
-   document.location.href = "#R3";
+   $('html, body').animate({scrollTop:$('#R3').position().top}, 'slow');
 }
 function activityh() {
 sessionStorage.setItem("goal", 1);
-   document.location.href = "#R3";
+   $('html, body').animate({scrollTop:$('#R3').position().top}, 'slow');
 }
 //Activty
 function activity1() {
 sessionStorage.setItem("activity", "1.2");
-  document.location.href = "#R2";
+  $('html, body').animate({scrollTop:$('#R2').position().top}, 'slow');
 }
 function activity2() {
 sessionStorage.setItem("activity", "1.3");
-  document.location.href = "#R2";
+  $('html, body').animate({scrollTop:$('#R2').position().top}, 'slow');
 }
 function activity3() {
 sessionStorage.setItem("activity", "1.5");
-  document.location.href = "#R2";
+  $('html, body').animate({scrollTop:$('#R2').position().top}, 'slow');
 }
 function activity4() {
 sessionStorage.setItem("activity", "1.7");
-  document.location.href = "#R2";
+  $('html, body').animate({scrollTop:$('#R2').position().top}, 'slow');
 }
 function activity5() {
 sessionStorage.setItem("activity", "1.9");
-  document.location.href = "#R2";
+  $('html, body').animate({scrollTop:$('#R2').position().top}, 'slow');
 }
 function activity6() {
 sessionStorage.setItem("activity", "2.0");
-  document.location.href = "#R2";
+  $('html, body').animate({scrollTop:$('#R2').position().top}, 'slow');
 }
 
 /**
