@@ -1,3 +1,6 @@
+/*!
+  Recptsida shows the choosen card and visuals the data from the recipe.
+ */
 $(document).ready(function(){
 
     var res = JSON.parse(sessionStorage.getItem("card"));
@@ -19,9 +22,9 @@ $(document).ready(function(){
         var target = this;
         return target.replace(new RegExp(search, 'g'), replacement);
     };
-    
+
     var description = description.replaceAll('\n', '<br/>');
-    
+
     $('#description').append(description);
 
   $.each(ingredients, function(index){
@@ -36,7 +39,7 @@ $(document).ready(function(){
     chart();
 
 }); 
-
+    /*Chart setup*/
 function chart(){
   var color = Chart.helpers.color;
   var config = {
@@ -84,7 +87,7 @@ function chart(){
           }
       }
   };
-
+  /*Loads on window load*/
   window.onload = function() {
       window.myRadar = new Chart(document.getElementById("canvas"), config);
   };

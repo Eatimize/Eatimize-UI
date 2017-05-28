@@ -1,3 +1,6 @@
+/*!
+  Help script for the chart if the user wants custom colors.
+ */
 window.chartColors = {
 	red: 'rgb(255, 99, 132)',
 	orange: 'rgb(255, 159, 64)',

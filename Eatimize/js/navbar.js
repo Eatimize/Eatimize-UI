@@ -1,4 +1,6 @@
-
+/*!
+  Loading templates
+ */
  $(document).ready(function(){
    var href = document.location.href;
    var lastPathSegment = href.substr(href.lastIndexOf('/') + 1);

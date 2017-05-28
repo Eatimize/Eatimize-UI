@@ -1,7 +1,10 @@
-$(document).ready(function(){                
-    
+/*!
+  Loading templates
+ */
+$(document).ready(function(){
+
        $('#sexButtons').load('template/radioBtnSex.php');
-      
+
         $("#preferences").load('template/pref.php');
-    
+
 });

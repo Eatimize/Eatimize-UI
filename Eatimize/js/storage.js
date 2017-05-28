@@ -1,3 +1,6 @@
+/*!
+  The main script for storage.
+ */
 var  restriction;
 
 //Mealtype

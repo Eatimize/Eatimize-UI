@@ -1,3 +1,6 @@
+/*!
+  Handles the get request and the search function.
+ */
 var array;
 $(document).ready(function(){
   var href = document.location.href;
@@ -9,6 +12,7 @@ $(document).ready(function(){
     search();
 
 });
+    /*Gets the information given by the user and sends it*/
     function getResult(){
 
              var  activity = sessionStorage.getItem("activity");
@@ -19,23 +23,20 @@ $(document).ready(function(){
              var  age = sessionStorage.getItem("age");
              var  type = sessionStorage.getItem("mealtype");
 
-             /* KARRO LÄGGER TILL */
+
             var resArray = ['vegan', 'vegetarian', 'gluten', 'laktos', 'milkprotein', 'nut'];
             var restriction = '';
 
             for (var i = 0; i <= resArray.length; i++) {
                if(sessionStorage.getItem(resArray[i]) == 'true'){
                   restriction += resArray[i]+",";
-                  console.log(restriction);
+
                }
             }
 
-            /* slut på test
-            */
-
+            /*Should be the adress where the api is located*/
             var baseUrl = "http://localhost:8080/api/1/"+activity+"/"+sex+"/"+weight+"/"+height+"/"+goal+"/"+age+"/"+type+"?restrictions="+restriction+"";
-             //var baseUrl= ""http://localhost:8080/api/1/1.2/man/75/175/goal/25/type";
-             console.log(baseUrl);
+
              $.ajax({
                  type: "GET",
                  url: baseUrl,
@@ -54,7 +55,9 @@ $(document).ready(function(){
 
                 }
 
-    function printRes(res){
+
+                /*Appends the response to a row*/
+                function printRes(res){
                 response = res;
                 array=response;
 
@@ -70,7 +73,7 @@ $(document).ready(function(){
 
             }
 
-            //Ersätt titel och beskrivning:
+              /*Replaces the content*/
             function replaceContent(e,t){
                 res=e;
                 for(var n=0;n<t.length;n++){
@@ -79,12 +82,15 @@ $(document).ready(function(){
                 return res
             }
 
-          function clickedCard(ref){
-                                console.log(ref.id);
-                               var clickedCard = JSON.stringify(array[ref.id]);
-                               sessionStorage.setItem("card", clickedCard);
+
+            /*Stores the card for the next page*/
+            function clickedCard(ref){
+                                      console.log(ref.id);
+                                     var clickedCard = JSON.stringify(array[ref.id]);
+                                     sessionStorage.setItem("card", clickedCard);
                 }
 
+                /*Search function*/
                 function search(){
                   $("#searchBtn").on('click', function() {
 

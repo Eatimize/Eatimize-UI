@@ -1,3 +1,6 @@
+/*!
+  Loading parallax
+ */
 function parallax() {
   var mat1 = document.getElementById('mat1');
   mat1.style.top = -(window.pageYOffset / 2) + 'px';
