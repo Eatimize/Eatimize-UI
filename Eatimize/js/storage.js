@@ -129,14 +129,14 @@ function checkPref() {
     	 sessionStorage.setItem("gluten", "false");
     }
     if(document.getElementById('nut').checked) {
-      sessionStorage.setItem("nut", "true");
+      sessionStorage.setItem("nuts", "true");
     } else{
-    	 sessionStorage.setItem("nut", "false");
+    	 sessionStorage.setItem("nuts", "false");
     }
     if(document.getElementById('laktos').checked) {
-      sessionStorage.setItem("laktos", "true");
+      sessionStorage.setItem("lactose", "true");
     } else{
-    	 sessionStorage.setItem("laktos", "false");
+    	 sessionStorage.setItem("lactose", "false");
     }
     if(document.getElementById('milkprotein').checked) {
       sessionStorage.setItem("milkprotein", "true");

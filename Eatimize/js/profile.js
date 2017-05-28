@@ -13,8 +13,8 @@
     var  vegan = sessionStorage.getItem("vegan");
     var  vegetarian = sessionStorage.getItem("vegetarian");
 		var  gluten = sessionStorage.getItem("gluten");
-		var  nut = sessionStorage.getItem("nut");
-		var  laktos = sessionStorage.getItem("laktos");
+		var  nut = sessionStorage.getItem("nuts");
+		var  laktos = sessionStorage.getItem("lactose");
 		var  milkprotein = sessionStorage.getItem("milkprotein");
 
 		var editMode = false;

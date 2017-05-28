@@ -24,7 +24,7 @@ $(document).ready(function(){
              var  type = sessionStorage.getItem("mealtype");
 
 
-            var resArray = ['vegan', 'vegetarian', 'gluten', 'laktos', 'milkprotein', 'nut'];
+            var resArray = ['vegan', 'vegetarian', 'gluten', 'lactose', 'milkprotein', 'nuts'];
             var restriction = '';
 
             for (var i = 0; i <= resArray.length; i++) {
@@ -37,6 +37,9 @@ $(document).ready(function(){
             /*Should be the adress where the api is located*/
             var baseUrl = "http://localhost:8080/api/1/"+activity+"/"+sex+"/"+weight+"/"+height+"/"+goal+"/"+age+"/"+type+"?restrictions="+restriction+"";
 
+        
+        console.log(baseUrl);
+        
              $.ajax({
                  type: "GET",
                  url: baseUrl,
