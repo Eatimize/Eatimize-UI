@@ -7,13 +7,13 @@ $(document).ready(function(){
   var lastPathSegment = href.substr(href.lastIndexOf('/') + 1);
 
     if(lastPathSegment=="receptLista.html"){
-      getResult();
+      getResult(false);
     }
     search();
 
 });
     /*Gets the information given by the user and sends it*/
-    function getResult(){
+    function getResult(update){
 
              var  activity = sessionStorage.getItem("activity");
              var  sex =  sessionStorage.getItem("sex");
@@ -23,7 +23,8 @@ $(document).ready(function(){
              var  age = sessionStorage.getItem("age");
              var  type = sessionStorage.getItem("mealtype");
 
-
+        
+        if(update===false){
             var resArray = ['vegan', 'vegetarian', 'gluten', 'lactose', 'milkprotein', 'nuts'];
             var restriction = '';
 
@@ -32,6 +33,23 @@ $(document).ready(function(){
                   restriction += resArray[i]+",";
 
                }
+            }
+            
+            }else{
+                console.log("update är " + update);
+                /* TESTKOD */ 
+                restriction='';
+
+              //for each - checkbutton som är ikryssad, 
+                // lägg till i restrictions
+                $(".cb").each(function(){
+                    if($(this).is(':checked')){
+                        restriction += $(this).attr("value")+",";
+                    }
+                                
+              });
+                console.log("update restr: " + restriction);
+                
             }
 
             /*Should be the adress where the api is located*/
@@ -95,6 +113,15 @@ $(document).ready(function(){
 
                 /*Search function*/
                 function search(){
+                    
+                $("#updateSearch").on('click', function(){
+                    $( ".recept" ).remove();
+                    
+                    getResult(true);
+                    
+
+                });    
+                    
                   $("#searchBtn").on('click', function() {
 
                  $('#searchField').keyup(function(e){
@@ -124,4 +151,6 @@ $(document).ready(function(){
                    }
                         });
                      });
+                    
+                    
                 }
