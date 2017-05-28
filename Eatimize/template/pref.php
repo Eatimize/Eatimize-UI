@@ -23,8 +23,8 @@
 
 
         <div class="prefDiv">
-            <input type='checkbox' name='pref' value='laktos' id="laktos" class="cb"/>    
-                <label for="laktos">
+            <input type='checkbox' name='pref' value='lactose' id="lactose" class="cb"/>    
+                <label for="lactose">
                     <img src="icons/laktos.png" class="prefimg">
                     <span>Laktosintolerant</span>
                 </label>
