@@ -133,7 +133,7 @@ function checkPref() {
     } else{
     	 sessionStorage.setItem("nuts", "false");
     }
-    if(document.getElementById('laktos').checked) {
+    if(document.getElementById('lactose').checked) {
       sessionStorage.setItem("lactose", "true");
     } else{
     	 sessionStorage.setItem("lactose", "false");
