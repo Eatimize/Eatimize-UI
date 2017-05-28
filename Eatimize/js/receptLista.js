@@ -37,11 +37,8 @@ $(document).ready(function(){
             
             }else{
                 console.log("update är " + update);
-                /* TESTKOD */ 
                 restriction='';
 
-              //for each - checkbutton som är ikryssad, 
-                // lägg till i restrictions
                 $(".cb").each(function(){
                     if($(this).is(':checked')){
                         restriction += $(this).attr("value")+",";
@@ -106,23 +103,37 @@ $(document).ready(function(){
 
             /*Stores the card for the next page*/
             function clickedCard(ref){
-                                      console.log(ref.id);
-                                     var clickedCard = JSON.stringify(array[ref.id]);
-                                     sessionStorage.setItem("card", clickedCard);
-                }
+                        
+                var clickedCard = JSON.stringify(array[ref.id]);
+                sessionStorage.setItem("card", clickedCard);
+                
+            }
 
                 /*Search function*/
                 function search(){
                     
-                $("#updateSearch").on('click', function(){
-                    $( ".recept" ).remove();
                     
+                /* Update preference buttons to match the information you entered */       
+                $(".cb").each(function(){
+                                    
+                   $(this).prop('checked', (sessionStorage.getItem($(this).attr("value")) === 'true')); 
+                  
+                });
+                    
+                /* 
+                * Make a new search based on new input of preferences
+                */     
+                $("#updateSearch").on('click', function(){
+                    
+                    $( ".recept" ).remove();                 
                     getResult(true);
                     
 
                 });    
                     
-                  $("#searchBtn").on('click', function() {
+                    
+                    
+                $("#searchBtn").on('click', function() {
 
                  $('#searchField').keyup(function(e){
                    if(e.keyCode == 13){
