@@ -13,7 +13,7 @@
     var  vegan = sessionStorage.getItem("vegan");
     var  vegetarian = sessionStorage.getItem("vegetarian");
 		var  gluten = sessionStorage.getItem("gluten");
-		var  nut = sessionStorage.getItem("nuts");
+		var  peanuts = sessionStorage.getItem("peanuts");
 		var  lactose = sessionStorage.getItem("lactose");
 		var  milkprotein = sessionStorage.getItem("milkprotein");
 
@@ -54,10 +54,10 @@
 				$("#lactose").prop("checked", false);
 			}
 
-			if(nut == "true"){
-				$("#nut").prop("checked", true);
+			if(peanuts == "true"){
+				$("#peanuts").prop("checked", true);
 			}else {
-				$("#nut").prop("checked", false);
+				$("#peanuts").prop("checked", false);
 			}
 
 			if(vegetarian == "true"){
@@ -106,7 +106,7 @@
 		    /* PREFERENSER: */
 			$("#gluten").prop("disabled", false);
 			$("#lactose").prop("disabled", false);
-		    $("#nut").prop("disabled", false);
+		    $("#peanuts").prop("disabled", false);
 		    $("#vegetarian").prop("disabled", false);
 			$("#vegan").prop("disabled", false);
 		    $("#milkprotein").prop("disabled", false);
@@ -130,7 +130,7 @@
 		    /* PREFERENSER: */
 			$("#gluten").prop("disabled", true);
 			$("#lactose").prop("disabled", true);
-		    $("#nut").prop("disabled", true);
+		    $("#peanuts").prop("disabled", true);
 		    $("#vegetarian").prop("disabled", true);
 			$("#vegan").prop("disabled", true);
 		    $("#milkprotein").prop("disabled", true);
@@ -153,7 +153,7 @@
 			/* PREFERENSER: */
 			var  gluten = $("#gluten").val();
 			var  lactose = $("#lactose").val();
-			var  nut = $("#nut").val();
+			var  peanuts = $("#peanuts").val();
 			var  vegetarian = $("#vegetarian").val();
 			var  vegan = $("#vegan").val();
 			var  milkprotein = $("#milkprotein").val();
@@ -180,7 +180,7 @@
 
 			$("#gluten").prop("disabled", true);
 			$("#lactose").prop("disabled", true);
-		    $("#nut").prop("disabled", true);
+		    $("#peanuts").prop("disabled", true);
 		    $("#vegetarian").prop("disabled", true);
 			$("#vegan").prop("disabled", true);
 		    $("#milkprotein").prop("disabled", true);
@@ -196,7 +196,7 @@
 		   	 getInfo();
 		   	 $("#gluten").prop("disabled", true);
 			 $("#lactose").prop("disabled", true);
-		     $("#nut").prop("disabled", true);
+		     $("#peanuts").prop("disabled", true);
 		     $("#vegetarian").prop("disabled", true);
 			 $("#vegan").prop("disabled", true);
 		     $("#milkprotein").prop("disabled", true);
