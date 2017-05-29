@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 
         if(update===false){
-            var resArray = ['vegan', 'vegetarian', 'gluten', 'lactose', 'milkprotein', 'peanuts'];
+            var resArray = ['vegan', 'vegetarian', 'gluten', 'lactose', 'milkprotein', 'nuts'];
             var restriction = '';
 
             for (var i = 0; i <= resArray.length; i++) {

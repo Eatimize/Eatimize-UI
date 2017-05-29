@@ -1,14 +1,14 @@
 <html>
 <head>
-        <link href="css/pref.css" rel="stylesheet" type="text/css">
-
-    <style>
+        <link href="css/pref.css" rel="stylesheet" type="text/css">      
+    
+    <style>   
         .prefDiv {
-
+        
             text-align: center;
             padding-bottom: 10px;
         }
-
+        
         .tooltip {
             position:relative;
             display: inline-block;
@@ -17,7 +17,7 @@
         .tooltip .tooltiptext {
 
              top: 60px;
-            left: -7%;
+            left: -7%; 
             visibility: hidden;
             background-color: dimgray;
             color: #fff;
@@ -31,9 +31,9 @@
         .tooltip:hover .tooltiptext {
             visibility: visible;
         }
-
+                
     </style>
-
+    
     </head>
 
     <body>
@@ -44,61 +44,61 @@
             <input type='checkbox' name='pref' value='gluten' id="gluten" class="cb"/>
             <label for="gluten">
                 <img src="icons/gluten.png" id="glutenimg" class="prefimg">
-            </label>
-
+            </label>  
+                
                 <span class="tooltiptext">Gluten</span>
                 </div>
 
         <div class="tooltip">
-            <input type='checkbox' name='pref' value='milkprotein' id="milkprotein" class="cb"/>
+            <input type='checkbox' name='pref' value='milkprotein' id="milkprotein" class="cb"/>    
                 <label for="milkprotein">
                     <img src="icons/milkprotein.png" class="prefimg">
                    <!-- <span>Mjölkprotein-allergi</span> -->
                 </label>
              <span class="tooltiptext">Mjölkprotein</span>
             </div>
-
+        
     <div class="tooltip">
-        <input type='checkbox' name='pref' value='lactose' id="lactose" class="cb"/>
+        <input type='checkbox' name='pref' value='lactose' id="lactose" class="cb"/>    
                 <label for="lactose">
                     <img src="icons/laktos.png" class="prefimg">
                 </label>
             <span class="tooltiptext">Laktos</span>
             </div>
-
+          
         <div class="tooltip">
-            <input type='checkbox' name='pref' value='peanuts' id="peanuts" class="cb"/>
-                <label for="peanuts">
+            <input type='checkbox' name='pref' value='nut' id="nut" class="cb"/>    
+                <label for="nut">
                     <img src="icons/nut.png" class="prefimg">
-                </label>
+                </label> 
             <span class="tooltiptext">Jordnöt</span>
             </div>
-
+   
         <div class="tooltip">
-            <input type='checkbox' name='pref' value='vegetarian' id="vegetarian" class="cb"/>
+            <input type='checkbox' name='pref' value='vegetarian' id="vegetarian" class="cb"/>    
                 <label for="vegetarian">
                     <img src="icons/vegetarian.png"  class="prefimg">
-                </label>
+                </label>    
             <span class="tooltiptext">Vegetarian</span>
             </div>
-
+       
         <div class="tooltip">
-            <input type='checkbox' name='pref' value='vegan' id="vegan" class="cb"/>
+            <input type='checkbox' name='pref' value='vegan' id="vegan" class="cb"/>    
                 <label for="vegan">
                     <img src="icons/vegan.png" class="prefimg">
                 </label>
                <span class="tooltiptext">Vegan</span>
             </div>
-
+            
             <button class="btn waves-effect green waves-light" type="submit" name="action" id="updateSearch">uppdatera sökning
     <i class="material-icons right">send</i>
   </button>
-
+            
         </div>
-
+    
     </body>
 
     <script src="/js/receptLista.js"></script>
-
-
+    
+    
 </html>

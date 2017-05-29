@@ -128,10 +128,10 @@ function checkPref() {
     } else{
     	 sessionStorage.setItem("gluten", "false");
     }
-    if(document.getElementById('peanuts').checked) {
-      sessionStorage.setItem("peanuts", "true");
+    if(document.getElementById('nut').checked) {
+      sessionStorage.setItem("nuts", "true");
     } else{
-    	 sessionStorage.setItem("peanuts", "false");
+    	 sessionStorage.setItem("nuts", "false");
     }
     if(document.getElementById('lactose').checked) {
       sessionStorage.setItem("lactose", "true");
