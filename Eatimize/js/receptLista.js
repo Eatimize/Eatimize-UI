@@ -23,7 +23,7 @@ $(document).ready(function(){
              var  age = sessionStorage.getItem("age");
              var  type = sessionStorage.getItem("mealtype");
 
-        
+
         if(update===false){
             var resArray = ['vegan', 'vegetarian', 'gluten', 'lactose', 'milkprotein', 'nuts'];
             var restriction = '';
@@ -34,7 +34,7 @@ $(document).ready(function(){
 
                }
             }
-            
+
             }else{
                 console.log("update är " + update);
                 restriction='';
@@ -43,18 +43,18 @@ $(document).ready(function(){
                     if($(this).is(':checked')){
                         restriction += $(this).attr("value")+",";
                     }
-                                
+
               });
                 console.log("update restr: " + restriction);
-                
+
             }
 
             /*Should be the adress where the api is located*/
             var baseUrl = "http://localhost:8080/api/1/"+activity+"/"+sex+"/"+weight+"/"+height+"/"+goal+"/"+age+"/"+type+"?restrictions="+restriction+"";
 
-        
+
         console.log(baseUrl);
-        
+
              $.ajax({
                  type: "GET",
                  url: baseUrl,
@@ -76,6 +76,7 @@ $(document).ready(function(){
 
                 /*Appends the response to a row*/
                 function printRes(res){
+                $("#progress-bar").hide();
                 response = res;
                 array=response;
 
@@ -103,36 +104,36 @@ $(document).ready(function(){
 
             /*Stores the card for the next page*/
             function clickedCard(ref){
-                        
+
                 var clickedCard = JSON.stringify(array[ref.id]);
                 sessionStorage.setItem("card", clickedCard);
-                
+
             }
 
                 /*Search function*/
                 function search(){
-                    
-                    
-                /* Update preference buttons to match the information you entered */       
-                $(".cb").each(function(){
-                                    
-                   $(this).prop('checked', (sessionStorage.getItem($(this).attr("value")) === 'true')); 
-                  
-                });
-                    
-                /* 
-                * Make a new search based on new input of preferences
-                */     
-                $("#updateSearch").on('click', function(){
-                    
-                    $( ".recept" ).remove();                 
-                    getResult(true);
-                    
 
-                });    
-                    
-                    
-                    
+
+                /* Update preference buttons to match the information you entered */
+                $(".cb").each(function(){
+
+                   $(this).prop('checked', (sessionStorage.getItem($(this).attr("value")) === 'true'));
+
+                });
+
+                /*
+                * Make a new search based on new input of preferences
+                */
+                $("#updateSearch").on('click', function(){
+
+                    $( ".recept" ).remove();
+                    getResult(true);
+
+
+                });
+
+
+
                 $("#searchBtn").on('click', function() {
 
                  $('#searchField').keyup(function(e){
@@ -162,6 +163,6 @@ $(document).ready(function(){
                    }
                         });
                      });
-                    
-                    
+
+
                 }
